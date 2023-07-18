@@ -175,7 +175,7 @@ figure.wp-block-embed-youtube > .wp-block-embed__wrapper iframe {
  * IN ORDER TO PREVENT SPILLING
  * OVER!
  */
-p{
+p {
 	word-break:break-word;
 }
 
@@ -186,8 +186,6 @@ p{
 article> img.wp-post-image {
 	min-width: 100%;
 }
-
-
 
 /**
  * Forces sub-sub menu's
@@ -263,9 +261,6 @@ div.gsc-results-wrapper-overlay {
 	background-color:#242525!important;
 }
 
-
-
-
 /**
  * Changes styling of the 
  * google search embed.
@@ -299,7 +294,6 @@ button.gsc-search-button {
 	background-color: white!important;
 }
 
-
 /**
  * Forces pagination
  * to be centered.
@@ -307,6 +301,7 @@ button.gsc-search-button {
 .pagination {
 	justify-content: center;
 }
+
 /**
  * Pagination style
  * custamisation.
@@ -321,13 +316,11 @@ button.gsc-search-button {
 	border-color:lightgray;
 	color:black!important;
 }
-
 .page-item.active .current{
 	background-color:lightgray;
 	border-color:lightgray;
 	color:black!important;
 }
-
 .page-item .dots{
 	background-color: white;
 	border-color: lightgray;
@@ -338,7 +331,6 @@ button.gsc-search-button {
 	color:black!important;
 }
 
-
 /**
  * Removes space before
  * galleries caused by
@@ -348,13 +340,6 @@ button.gsc-search-button {
 .blocks-gallery-grid {
 	padding-left: 0px!important;
 }
-
-
-
-
-
-
-
 
 /**
  * Verse quick fix?
@@ -395,11 +380,6 @@ blockquote {
 	color:#a6191a;
 }
 
-
-
-
-
-
 /**
  * Devices with screens
  * below 768px
@@ -427,9 +407,6 @@ blockquote {
 	
 }
 
-
-
-
 /**
  * Styles Polly Toggle.
  */
@@ -437,7 +414,6 @@ blockquote {
 {
 	text-align:center;
 }
-
 
 /**
  * Styles Audio Player.
@@ -450,25 +426,6 @@ audio {
 	margin-right:25%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body.page-template-featurepage h1.entry-title:after {
 	content: none;
 }
@@ -477,19 +434,9 @@ body.page-template-featurepage h1.entry-title:before {
 	content: none;
 }
 
-
-
-
-
-
 /**
  * Limit Max Width.
  */
-
-
-
-
-
 
 // Grid breakpoints
 //
@@ -522,21 +469,7 @@ $container-max-widths: (
 ) !default;
 // scss-docs-end container-max-widths
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //   TEXT STUFF FROM BOOTSTRAP 5!
-
 
 // Prefix for :root CSS variables
 
@@ -601,10 +534,6 @@ $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
-
-
-
-
 // Links
 //
 // Style anchor elements.
@@ -615,11 +544,6 @@ $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   none !default;
 
-
-
-
-
-
 .row.nav-links.justify-content-between>* {
 	width: unset!important;
 }
@@ -627,9 +551,6 @@ $link-hover-decoration:                   none !default;
 .row>.thing {
 	width:unset!important;
 }
-
-
-
 
 // Color system
 
@@ -694,13 +615,9 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-
-
-
 // Components
 //
 // Define common padding and border radius sizes and more.
-
 
 // scss-docs-start border-variables
 $border-width:                1px !default;
@@ -729,9 +646,6 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
 
-
-
-
 // Pagination
 
 // scss-docs-start pagination-variables
@@ -753,11 +667,7 @@ $pagination-border-color:           $gray-300 !default;
 $pagination-focus-color:            $link-hover-color !default;
 $pagination-focus-bg:               $gray-200 !default;
 
-
-
 $pagination-focus-box-shadow:       none;
-
-
 
 $pagination-focus-outline:          0 !default;
 
@@ -768,15 +678,6 @@ $pagination-hover-border-color:     $gray-300 !default;
 $pagination-active-color:           #000;
 $pagination-active-bg:              #d3d3d3;
 $pagination-active-border-color:    #d3d3d3;
-
-
-
-
-
-
-
-
-
 
 /**
  * Forces sub-sub menu's
@@ -790,11 +691,6 @@ ul.dropdown-menu li>ul {
 	position: static!important;
 }
 
-
-
-
-
-
 .navigation {
 	padding-right: unset!important;
 	padding-left: unset!important;
@@ -805,9 +701,6 @@ ul.dropdown-menu li>ul {
 	width:unset!important;
 	max-width:unset!important;
 }
-
-
-
 
 /**
  * Box Shadow, Border and Checkbox Colours.
@@ -833,44 +726,28 @@ ul.dropdown-menu li>ul {
 	border-color: lightgray!important;
 }
 
-
-
-
-
-
-
-
 /**
- * Heading Font Size.
+ * Menu styling.
  */
 #main-menu a {
 	font-size: 1em!important;
 }
-
 #main-menu a:hover {
 	color: #0571FF!important;
 	background-color: unset!important;
 }
-
 #main-menu a:focus {
 	color: #0571FF!important;
 	background-color: unset!important;
 }
-
-
 .navbar-dark .navbar-nav .active {
 	background-color: unset!important;
 }
-
-
 .dropdown-menu {
 	border:none!important;
 }
 
-
-
-
-/* ============== GOOGLE FONT EXPERIMENTS ===================== */
+/* ============== GOOGLE FONT IMPLEMENTATION ===================== */
 
 @font-face {
 	font-family: "Fira Sans";
@@ -953,6 +830,7 @@ ul.dropdown-menu li>ul {
 	font-display: swap;
 }
 
+/* =============================================================== */
 
 
 /**
@@ -962,7 +840,6 @@ h2 {
 	font-weight: 800!important;
 }
 
-
 /**
  *	FOOTER STYLING
  */
@@ -970,7 +847,6 @@ h2 {
 	background-color: #231F20!important;
 	color: #fff;
 }
-
 
 #wrapper-footer-full h2 {
 	color: #A8C1D9!important;
@@ -1023,22 +899,12 @@ a:-webkit-any-link:hover {
 #wrapper-footer a:-webkit-any-link:hover {
 	color: #0571FF;
 }
-
-
-
-
-
-
 .site-info {
 	text-align: center;
 }
-
 .site-info>p {
 	margin-bottom: 1rem!important;
 }
-
-
-
 
 /**
  *	WIDTH AT WHICH LOGO GOES FULL WIDTH!
@@ -1053,12 +919,9 @@ a:-webkit-any-link:hover {
 	min-width: 100px;
 }
 
-
-
 #wrapper-navbar>nav>div.container {
 	text-align:center;
 }
-
 
 /**
  *	Standard Header Colours.
@@ -1079,7 +942,6 @@ h5 {
 	color: #8093A5;
 }
 
-
 /**
  *	Standard Header Margins.
  */
@@ -1090,12 +952,9 @@ h1, h2, h3, h4, h5 {
 h1 {
 	font-weight: 800!important;
 }
-
-
-
-
-
-
+/**
+ * btn styling.
+ */
 .btn {
 	padding: 17px 30px!important;
 	border-radius: 30px!important;
@@ -1107,41 +966,34 @@ h1 {
 	color: #ffffff!important;
 }
 
-
-
-
-
+/**
+ * Styling of the ".fancy" columns.
+ */
 .fancy {
 	color:white!important;
 }
 .fancy h2 {
 	color:white;
 }
-
 .fancy .darkblue {
 	background-color: #333459!important;
 }
-
 .fancy .lightblue {
 	background-color: #4fccd4!important;
 }
-
 .fancy .lightgreen {
 	background-color: #4cc49e!important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fancy .wp-block-button a {
+	background-color: rgba(255, 255, 255, 0.2)!important;
+}
+.fancy .wp-block-button a:hover {
+	border: 1px solid rgba(255, 255, 255, 0.6)!important;
+	background-color:transparent!important;
+}
+.fancy .darkgreen {
+	background-color: #198754!important;
+}
 
 /**
  * Makes all large "squared" images
@@ -1160,8 +1012,6 @@ h1 {
 	border-radius: 30px!important;
 	font-weight: 700!important;
 	font-size: 13.6px!important;
-
-	//background-color: #0B4C8C!important;
 	color: #ffffff!important;
 }
 
@@ -1171,25 +1021,6 @@ h1 {
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background),.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background) {
 	background-color: #0B4C8C!important;
 }
-
-.fancy .wp-block-button a {
-	background-color: rgba(255, 255, 255, 0.2)!important;
-}
-
-.fancy .wp-block-button a:hover {
-	border: 1px solid rgba(255, 255, 255, 0.6)!important;
-	background-color:transparent!important;
-}
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Adds padding to center aligned paragraphs.
@@ -1220,22 +1051,6 @@ h4.has-text-align-center {
 	padding-bottom:2em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Body
 //
 // Settings for the `<body>` element.
@@ -1243,9 +1058,6 @@ h4.has-text-align-center {
 $body-bg:                   $white !default;
 $body-color:                #808080 !default;
 $body-text-align:           null !default;
-
-
-
 
 /**
  * Font option.
@@ -1255,13 +1067,6 @@ $body-text-align:           null !default;
 	color: #4fccd4;
 	font-weight: 400!important;
 }
-
-
-
-
-
-
-
 
 /**
  * headers in media text block.
@@ -1276,25 +1081,9 @@ $body-text-align:           null !default;
 	padding-top:1em;
 }
 
-
 .wp-block-buttons {
 	padding-bottom: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Makes seperators used for
@@ -1305,12 +1094,9 @@ $body-text-align:           null !default;
 	opacity: 0;
 }
 
-
-
 .allwhite a {
 	color:white;
 }
-
 
 .allwhite .wp-block-button a {
 	color:#4fccd4!important;
@@ -1321,18 +1107,10 @@ $body-text-align:           null !default;
 	background:white;
 }
 
-
 .wp-block-columns {
 	margin-bottom: 0em;
 }
 
-
-
-
-
-.fancy .darkgreen {
-	background-color: #198754!important;
-}
 
 /**
  * Styling for forcing
@@ -1389,9 +1167,6 @@ ul.middle {
 	}
 }
 
-
-
-
 /**
  * Makes contact form full width.
  */
@@ -1405,7 +1180,6 @@ div.wpforms-container-full {
 	outline:none;
 }
 
-
 /**
  * Maked iframes full width!
  */
@@ -1413,10 +1187,6 @@ div.wpforms-container-full {
 	max-width: 100%;
 	width: 100%;
 }
-
-
-
-
 
 /**
  * Makes buttonbox display
@@ -1434,9 +1204,6 @@ div.wpforms-container-full {
 .navbar-toggler:focus {
 	box-shadow: 0 0 0 0!important;
 }
-
-
-
 
 // Button focus box shadow stuff start
 $component-active-color:      $white !default;
@@ -1462,8 +1229,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
     margin-bottom: 1px;
 }
 
-
-
 /**
  * Unsets border color defaulting to white
  * due to "\src\sass\assets\understrap\theme\_colors.scss"
@@ -1482,7 +1247,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	padding-right:15px;
 }
 
-
 /**
  * Column Fix for front page.
  */
@@ -1490,18 +1254,12 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	width: 100%;
 }
 
-
 /**
  * Container Centering Fix For WordPress 6.1.
  */
 .is-content-justification-center {
 	align-self:center;
 }
-
-
-
-
-
 
 /**
  * Repositions contents
@@ -1518,9 +1276,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 		bottom: 5%
 	}
 }
-
-
-
 
 /* Brand icon*/
 .brand::before {
@@ -1672,30 +1427,21 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	content: '\f4c4';
 }
 
-
-
-
-
-
 /**
  * Menu Experiments.
  */
 #wrapper-navbar>nav>div.container {
 	justify-content: center;
 }
-
 @media (min-width: 992px) {
 	.navbar-nav {
 		flex-flow: row!important;
 	}
 }
-
 .navbar-nav li {
 	flex-flow: row;
 	padding: 0.25rem 1rem;
 }
-
-
 .dropdown-menu {
 	background-color:unset!important;
 	color:white!important;
@@ -1704,8 +1450,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	background-color:unset!important;
 	color:white!important;
 }
-
-
 .navbar button {
 	color: #000;
 	background: none;
@@ -1719,8 +1463,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	margin-left:0.5rem;
 }
 
-
-
 /**
  * Forces sub menu's
  * to display when menu
@@ -1732,13 +1474,11 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	}
 }
 
-
 /**
  * Targets specific menu item
  * and makes it a column
  * (for social icons).
  */
-
 /*mobile version*/
 #menu-item-10756 > ul.show {
 	grid-auto-flow: column;
@@ -1761,17 +1501,12 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	padding:unset!important;
 }
 
-
 /**
  * Removes menu arrows.
  */
 .dropdown-toggle:after {
 	display:none!important;
 }
-
-
-
-
 
 /**
  * Forcing Left Align
@@ -1793,9 +1528,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	padding-right:0px!important;
 }
 
-
-
-
 /**
  * Left Border Lines
  * in Menus.
@@ -1806,7 +1538,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	border-left-width: thin!important;
 	border-radius:0px!important;
 }
-
 
 /**
  * Padding stuff
@@ -1820,18 +1551,15 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 #menu-item-10756 > ul {
 	padding-left:10px!important;
 }
-
 .dropdown-menu> *{
 	padding-top:0px!important;
 }
 .dropdown-menu> *>*{
 	padding-top:0px!important;
 }
-
 .navbar-nav > *{
 	padding-bottom:1rem!important;
 }
-
 .dropdown-menu >:nth-last-child(1) {
 	padding-bottom: 0px!important;
 }
@@ -1839,15 +1567,13 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	padding-bottom: 0px!important;
 }
 
-
-
 .dropdown-toggle.nav-link {
 	font-weight: bold!important;
 }
 
 /**
  * Makes menu word
- * wrap correctly.
+ * wrap differently.
  * 
  * (Disabled)
  */
@@ -1871,17 +1597,10 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
  * Top Item (Except on mobile).
  */
 @media (min-width: 992px) {
-		.navbar-nav >.menu-item > a {
-			pointer-events: none!important;
+	.navbar-nav >.menu-item > a {
+		pointer-events: none!important;
 	}
 }
-
-
-
-
-
-
-
 
 /**
  * Footer stuff.
@@ -1892,12 +1611,10 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 
 .footer-extra p {
 	margin-bottom:0px;
-	
 }
 .footer-extra {
 	margin-top:1rem;
 }
-
 
 /**
  * Left Border Lines
@@ -1922,8 +1639,6 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 		width: 30%!important;
 	}
 }
-
-
 
 @media (min-width: 768px) {
 	#footer-full-content>.row>:first-child>.wp-block-group {

@@ -539,7 +539,7 @@ ul.dropdown-menu li > ul {
 }
 
 /**
- * Heading Font Size.
+ * Menu styling.
  */
 #main-menu a {
   font-size: 1em !important;
@@ -563,7 +563,7 @@ ul.dropdown-menu li > ul {
   border: none !important;
 }
 
-/* ============== GOOGLE FONT EXPERIMENTS ===================== */
+/* ============== GOOGLE FONT IMPLEMENTATION ===================== */
 @font-face {
   font-family: "Fira Sans";
   font-style: normal;
@@ -634,6 +634,7 @@ ul.dropdown-menu li > ul {
   font-weight: 400;
   font-display: swap;
 }
+/* =============================================================== */
 /**
  *	DEFAULT h2 STYLE!
  */
@@ -761,6 +762,9 @@ h1, .h1 {
   font-weight: 800 !important;
 }
 
+/**
+ * btn styling.
+ */
 .btn {
   padding: 17px 30px !important;
   border-radius: 30px !important;
@@ -773,6 +777,9 @@ h1, .h1 {
   color: #ffffff !important;
 }
 
+/**
+ * Styling of the ".fancy" columns.
+ */
 .fancy {
   color: white !important;
 }
@@ -791,6 +798,19 @@ h1, .h1 {
 
 .fancy .lightgreen {
   background-color: #4cc49e !important;
+}
+
+.fancy .wp-block-button a {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.fancy .wp-block-button a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background-color: transparent !important;
+}
+
+.fancy .darkgreen {
+  background-color: #198754 !important;
 }
 
 /**
@@ -818,15 +838,6 @@ h1, .h1 {
  */
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background), .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background) {
   background-color: #0B4C8C !important;
-}
-
-.fancy .wp-block-button a {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.fancy .wp-block-button a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  background-color: transparent !important;
 }
 
 /**
@@ -913,10 +924,6 @@ h4.has-text-align-center, .has-text-align-center.h4 {
 
 .wp-block-columns {
   margin-bottom: 0em;
-}
-
-.fancy .darkgreen {
-  background-color: #198754 !important;
 }
 
 /**
@@ -1416,7 +1423,7 @@ div.wpforms-container-full {
 
 /**
  * Makes menu word
- * wrap correctly.
+ * wrap differently.
  * 
  * (Disabled)
  */
