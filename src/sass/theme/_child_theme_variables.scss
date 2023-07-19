@@ -1680,3 +1680,33 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 		top:unset!important;
 	}
 }
+
+/**
+ * Feature Page
+ * Styling.
+ */
+.feature-logo {
+    margin-left: 5%!important;
+    width: 20%;
+    height: 20%;
+}
+#innerdiv1 {
+    width: 100%;
+    top: 0;
+}
+#innerdiv2 .h1, #innerdiv2 h1 {
+    font-size: 2.5em;
+}
+#innerdiv2 {
+    bottom: 0;
+    margin-left: 5%!important;
+}
+body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h1.entry-title {
+    background-color: #000!important;
+    border-radius: 15px 15px 0 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: unset;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
