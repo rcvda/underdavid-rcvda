@@ -211,7 +211,11 @@ function embed_styles() {
 	}
 	.wp-embed-heading a {
 		font-family: "Open Sans", sans-serif;
-		color: inherit;
+		color: #0571FF;
+	}
+	.wp-embed-heading a:hover  {
+		color: darkgray;
+		text-decoration: none!important;
 	}
 	.wp-embed-author {
 		margin-top: 0.5em;
@@ -221,6 +225,7 @@ function embed_styles() {
 	}
 	.wp-embed-author a:hover {
 		color: darkgray;
+		text-decoration: none!important;
  	}
  	.wp-embed-featured-image {
  		width: 150px!important;

@@ -695,6 +695,16 @@ a:-webkit-any-link:hover {
 }
 
 /**
+ * Changed Related Posts hover
+ * behaviour to be in-line with
+ * all other links styling.
+ */
+.jp-relatedposts-post:hover a:-webkit-any-link {
+  color: darkgray;
+  text-decoration: none !important;
+}
+
+/**
  * Footer Link colours.
  */
 #wrapper-footer-full a:-webkit-any-link {
