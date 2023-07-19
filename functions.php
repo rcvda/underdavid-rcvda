@@ -926,7 +926,7 @@ function wpb_custom_toolbar_link($wp_admin_bar) {
     $args = array(
         'id' => 'guide',
         'title' => 'Guide', 
-        'href' => 'https://www.rcvda.org.uk/guide/', 
+        'href' => '/guide/', 
         'meta' => array(
             'class' => 'guide', 
             'title' => 'Guide'
