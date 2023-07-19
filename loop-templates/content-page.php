@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 			
 			<div id="innerdiv1" style="z-index: 2; position: absolute; text-align: left; color: white;">
-				<img src="https://www.rcvda.org.uk/wp-content/uploads/2022/04/RCVDA-Logo-Just-Title-White-Outlines-950x191-1.webp" 
+				<img src="/wp-content/uploads/2023/07/RCVDA-Logo-without-Text-White-Outline-768x157-1.webp" 
 					 alt="" style="" class="feature-logo"/>
 				
 			</div>
