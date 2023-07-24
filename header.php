@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link async rel="preload" href="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js" as="script" />
 	
 <!-- 	Preload Favicon? -->
-	<link rel="preload" as="image" media=”all” href="/wp-content/uploads/2023/07/cropped-RCVDA-Favicon-Resized-32x32.webp" async>
+	<link rel="preload" as="image" media=”all” href="/wp-content/uploads/2023/07/cropped-RCVDA-square-logo-1-32x32.webp" async>
 	
 	<?php if (is_front_page()) { ?>
 	<!-- 		Preload Top Image -->
