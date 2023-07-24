@@ -1356,9 +1356,12 @@ div.wpforms-container-full {
  * Targets specific menu item
  * and makes it a column
  * (for social icons).
+ * 
+ * (Currently aims at id
+ * can be improved)
  */
 /*mobile version*/
-#menu-item-10756 > ul.show {
+#menu-item-10920 > ul.show {
   grid-auto-flow: column;
   display: inline-grid;
   padding: 0.25rem 1rem;
@@ -1366,18 +1369,18 @@ div.wpforms-container-full {
 
 /*pc version*/
 @media (min-width: 992px) {
-  #menu-item-10756 > ul {
+  #menu-item-10920 > ul {
     grid-auto-flow: column;
     display: inline-grid;
     padding: 0.25rem 1rem;
   }
 }
 /*remove padding*/
-#menu-item-10756 > ul > li {
+#menu-item-10920 > ul > li {
   padding: unset !important;
 }
 
-#menu-item-10756 > ul > li > a {
+#menu-item-10920 > ul > li > a {
   padding: unset !important;
 }
 
@@ -1432,7 +1435,7 @@ div.wpforms-container-full {
   padding-left: 10px !important;
 }
 
-#menu-item-10756 > ul {
+#menu-item-10920 > ul {
   padding-left: 10px !important;
 }
 

@@ -95,7 +95,9 @@ function understrap_add_site_child_info() {
 	{
 		?>
 		<div class="wrap">
-			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by Millie Thomas and Developed by 
+			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by 
+				<a rel="nofollow" href=<?php echo 'https://www.milliethomasillustrations.com/' ?>>Millie Thomas
+				</a> and Developed by 
 				<a rel="nofollow" href=<?php echo 'https://davidstockdalescrapcode.co.uk/' ?>>David Stockdale
 				</a>/
 				<a rel="nofollow" 
@@ -109,7 +111,9 @@ function understrap_add_site_child_info() {
 	{
 		?>
 		<div class="wrap">
-			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by Millie Thomas and Developed by 
+			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by 
+				<a rel="nofollow" href=<?php echo 'https://www.milliethomasillustrations.com/' ?>>Millie Thomas
+				</a> and Developed by 
 				<a rel="nofollow" href=<?php echo 'https://davidstockdalescrapcode.co.uk/' ?>>David Stockdale
 				</a>/
 				<a rel="nofollow" 
