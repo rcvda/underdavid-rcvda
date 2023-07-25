@@ -854,10 +854,11 @@ h1, .h1 {
  */
 .wp-block-buttons > .wp-block-button a {
   padding: 17px 30px !important;
-  border-radius: 30px !important;
+  border-radius: 0px;
   font-weight: 700 !important;
   font-size: 13.6px !important;
   color: #ffffff !important;
+  width: 100%;
 }
 
 /**
@@ -923,8 +924,16 @@ h4.has-text-align-center, .has-text-align-center.h4 {
   padding-top: 1em;
 }
 
+/**
+ * Button stuff.
+ */
 .wp-block-buttons {
   padding-bottom: 2em;
+  width: 100%;
+}
+
+.wp-block-buttons > .wp-block-button {
+  width: 100%;
 }
 
 /**
