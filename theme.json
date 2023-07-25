@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "RCVDA Orange",
+                    "slug": "rcvda-orange",
+                    "color": "#F3A00A"
+                },
+                {
+                    "name": "RCVDA Blue",
+                    "slug": "rcvda-blue",
+                    "color": "#1A4086"
+                },
+                {
+                    "name": "RCVDA Red",
+                    "slug": "rcvda-red",
+                    "color": "#DA1E15"
+                },
+                {
+                    "name": "RCVDA Light Blue",
+                    "slug": "rcvda-light-blue",
+                    "color": "#A8C1D9"
+                }
+            ]
+        }
+    }
+}
