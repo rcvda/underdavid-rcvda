@@ -1026,6 +1026,11 @@ function set_image_auto_wide( $metadata ) {
 
 /**
  * For David-Scroller Plugin
+ * Stores/updates the array of Api Keys within the options database table.
+ */
+// update_option( 'api_key_array', array(1 => "XXX_XXX"), true );
+/**
+ * For David-Scroller Plugin
  * Stores/updates the array of SpreadSheet IDs within the options database table.
  */
 // update_option( 'spreadsheet_id_array', array(1 => "XXX-XXX-XXX",
