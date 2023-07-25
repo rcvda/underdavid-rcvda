@@ -1021,3 +1021,12 @@ function set_image_auto_wide( $metadata ) {
   $metadata['attributes']['align']['default'] = 'wide';
   return $metadata;
 }
+
+
+
+/**
+ * For David-Scroller Plugin
+ * Stores/updates the array of SpreadSheet IDs within the options database table.
+ */
+// update_option( 'spreadsheet_id_array', array(1 => "XXX-XXX-XXX",
+// 											 2 =>"XXX-XXX"), true );

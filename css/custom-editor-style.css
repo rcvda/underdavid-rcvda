@@ -1592,6 +1592,28 @@ body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h
   margin-bottom: 0 !important;
 }
 
+/**
+ * Styling special links
+ * that should not follow the
+ * standard colour scheme.
+ */
+.special a:-webkit-any-link {
+  color: unset;
+}
+
+.special a:-webkit-any-link:hover {
+  color: #0571ff;
+}
+
+/**
+ * Centers menu buttons
+ * on mobile.
+ */
+@media (max-width: 991px) {
+  #buttonz {
+    justify-content: center !important;
+  }
+}
 *,
 *::before,
 *::after {

@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link async rel="preload" href="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js" as="script" />
 	
 <!-- 	Preload Favicon? -->
-	<link rel="preload" as="image" media=”all” href="/wp-content/uploads/2023/07/cropped-RCVDA-square-logo-1-32x32.webp" async>
+	<link rel="preload" as="image" media=”all” href="/wp-content/uploads/2023/07/cropped-RCVDA-Favicon-White-Border-32x32.webp" async>
 	
 	<?php if (is_front_page()) { ?>
 	<!-- 		Preload Top Image -->
@@ -100,7 +100,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 				<div class="col-lg-10">
-					<div id="buttonz" style="display: flex; justify-content: center;">
+					<div id="buttonz" style="display: flex; justify-content: right;">
 					<button class="menu1"
 							id="tglBtn1"
 							type="button"
@@ -167,7 +167,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 				
-				<div class="container" style="background-color:#1A223E; background-clip: content-box;">
+				<div id="menuContainer1" class="container" style="background-color:#1A223E; background-clip: content-box;">
 					<ul id="buttonbox" style="padding-left:0px; margin-bottom: 0px;">
 						
 						<?php wp_nav_menu(
@@ -185,7 +185,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 					</ul>
 				</div>
-				<div class="container" style="background-color:#154284; background-clip: content-box;">
+				<div id="menuContainer2" class="container" style="background-color:#154284; background-clip: content-box;">
 					<ul id="buttonbox" style="padding-left:0px; margin-bottom: 0px;">
 						
 						<?php wp_nav_menu(
@@ -203,7 +203,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 					</ul>
 				</div>
-				<div class="container" style="background-color:#DA1E19; background-clip: content-box;">
+				<div id="menuContainer3" class="container" style="background-color:#DA1E19; background-clip: content-box;">
 					<ul id="buttonbox" style="padding-left:0px; margin-bottom: 0px;">
 						
 						<?php wp_nav_menu(
