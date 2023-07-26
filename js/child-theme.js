@@ -47,7 +47,7 @@
 	var data = {exports: {}};
 
 	/*!
-	  * Bootstrap data.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap data.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -119,7 +119,7 @@
 	var util = {exports: {}};
 
 	/*!
-	  * Bootstrap index.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap index.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -407,7 +407,7 @@
 	}
 
 	/*!
-	  * Bootstrap event-handler.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap event-handler.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -652,7 +652,7 @@
 	var manipulator = {exports: {}};
 
 	/*!
-	  * Bootstrap manipulator.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap manipulator.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -729,7 +729,7 @@
 	}
 
 	/*!
-	  * Bootstrap config.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap config.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -801,7 +801,7 @@
 	}
 
 	/*!
-	  * Bootstrap base-component.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap base-component.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -826,7 +826,7 @@
 			  /**
 			   * Constants
 			   */
-			  const VERSION = '5.3.0';
+			  const VERSION = '5.3.1';
 
 			  /**
 			   * Class definition
@@ -893,7 +893,7 @@
 	var selectorEngine = {exports: {}};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap selector-engine.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1002,7 +1002,7 @@
 	}
 
 	/*!
-	  * Bootstrap component-functions.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap component-functions.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1050,7 +1050,7 @@
 	}
 
 	/*!
-	  * Bootstrap alert.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap alert.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1142,7 +1142,7 @@
 	var button$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap button.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap button.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1225,7 +1225,7 @@
 	var swipe = {exports: {}};
 
 	/*!
-	  * Bootstrap swipe.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap swipe.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1364,7 +1364,7 @@
 	}
 
 	/*!
-	  * Bootstrap carousel.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap carousel.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1754,7 +1754,7 @@
 	var collapse$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap collapse.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap collapse.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -3672,7 +3672,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap dropdown.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4082,7 +4082,7 @@
 	var backdrop = {exports: {}};
 
 	/*!
-	  * Bootstrap backdrop.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap backdrop.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4228,7 +4228,7 @@
 	var focustrap = {exports: {}};
 
 	/*!
-	  * Bootstrap focustrap.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap focustrap.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4348,7 +4348,7 @@
 	var scrollbar = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollbar.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap scrollbar.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4465,7 +4465,7 @@
 	}
 
 	/*!
-	  * Bootstrap modal.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap modal.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4787,7 +4787,7 @@
 	var offcanvas$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap offcanvas.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5039,7 +5039,7 @@
 	var sanitizer = {exports: {}};
 
 	/*!
-	  * Bootstrap sanitizer.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap sanitizer.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5159,7 +5159,7 @@
 	var templateFactory = {exports: {}};
 
 	/*!
-	  * Bootstrap template-factory.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap template-factory.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5314,7 +5314,7 @@
 	}
 
 	/*!
-	  * Bootstrap tooltip.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap tooltip.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5864,7 +5864,7 @@
 	var tooltip = /*@__PURE__*/getDefaultExportFromCjs(tooltipExports);
 
 	/*!
-	  * Bootstrap popover.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap popover.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5962,7 +5962,7 @@
 	var scrollspy$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap scrollspy.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6239,7 +6239,7 @@
 	var tab$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap tab.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap tab.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6273,6 +6273,8 @@
 		  const ARROW_RIGHT_KEY = 'ArrowRight';
 		  const ARROW_UP_KEY = 'ArrowUp';
 		  const ARROW_DOWN_KEY = 'ArrowDown';
+		  const HOME_KEY = 'Home';
+		  const END_KEY = 'End';
 		  const CLASS_NAME_ACTIVE = 'active';
 		  const CLASS_NAME_FADE = 'fade';
 		  const CLASS_NAME_SHOW = 'show';
@@ -6379,13 +6381,19 @@
 		      this._queueCallback(complete, element, element.classList.contains(CLASS_NAME_FADE));
 		    }
 		    _keydown(event) {
-		      if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY].includes(event.key)) {
+		      if (![ARROW_LEFT_KEY, ARROW_RIGHT_KEY, ARROW_UP_KEY, ARROW_DOWN_KEY, HOME_KEY, END_KEY].includes(event.key)) {
 		        return;
 		      }
 		      event.stopPropagation(); // stopPropagation/preventDefault both added to support up/down keys without scrolling the page
 		      event.preventDefault();
-		      const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key);
-		      const nextActiveElement = index_js.getNextActiveElement(this._getChildren().filter(element => !index_js.isDisabled(element)), event.target, isNext, true);
+		      const children = this._getChildren().filter(element => !index_js.isDisabled(element));
+		      let nextActiveElement;
+		      if ([HOME_KEY, END_KEY].includes(event.key)) {
+		        nextActiveElement = children[event.key === HOME_KEY ? 0 : children.length - 1];
+		      } else {
+		        const isNext = [ARROW_RIGHT_KEY, ARROW_DOWN_KEY].includes(event.key);
+		        nextActiveElement = index_js.getNextActiveElement(children, event.target, isNext, true);
+		      }
 		      if (nextActiveElement) {
 		        nextActiveElement.focus({
 		          preventScroll: true
@@ -6518,7 +6526,7 @@
 	var toast$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap toast.js v5.3.0 (https://getbootstrap.com/)
+	  * Bootstrap toast.js v5.3.1 (https://getbootstrap.com/)
 	  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
