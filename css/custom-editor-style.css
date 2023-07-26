@@ -824,6 +824,15 @@ h1, .h1 {
 }
 
 /**
+ * Styling of peters ".is-style-outline" buttons
+ * in the ".fancy" columns.
+ */
+.fancy .wp-block-button.is-style-outline a:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  background-color: transparent !important;
+}
+
+/**
  * Makes all large "squared" images
  * in the ".fancy" columns the same size.
  */
