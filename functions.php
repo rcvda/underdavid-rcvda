@@ -1036,3 +1036,31 @@ update_option( 'api_key_array', array(1 => "$api_key8"), true );
  */
 global $sheet_id1;
 update_option( 'spreadsheet_id_array', array(1 => "$sheet_id1"), true );
+
+
+/**
+ * Allow authors and contributors to see and edit private and public posts and pages.
+ */
+function read_private_content(){
+	$authRole = get_role( 'author' ); 
+	$authRole->add_cap( 'read_private_posts' );
+	$authRole->add_cap( 'read_private_pages' );
+
+	$authRole->add_cap( 'edit_private_pages' );
+	$authRole->add_cap( 'edit_private_posts' );
+
+	$authRole->add_cap( 'edit_pages' );
+	$authRole->add_cap( 'edit_posts' );
+	
+	
+	$contRole = get_role( 'contributor' );
+	$contRole->add_cap( 'read_private_posts' );
+	$contRole->add_cap( 'read_private_pages' ); 
+	
+	$contRole->add_cap( 'edit_private_pages' );
+	$contRole->add_cap( 'edit_private_posts' );
+	
+	$contRole->add_cap( 'edit_pages' );
+	$contRole->add_cap( 'edit_posts' );
+}
+add_action( 'admin_init', 'read_private_content' );
