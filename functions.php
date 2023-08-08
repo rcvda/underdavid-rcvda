@@ -1035,7 +1035,9 @@ update_option( 'api_key_array', array(1 => "$api_key8"), true );
  * Stores/updates the array of SpreadSheet IDs within the options database table.
  */
 global $sheet_id1;
-update_option( 'spreadsheet_id_array', array(1 => "$sheet_id1"), true );
+global $sheet_id2;
+update_option( 'spreadsheet_id_array', array(1 => "$sheet_id1",
+											2 => "$sheet_id2"), true );
 
 
 /**
