@@ -25,9 +25,11 @@ Based on the Understrap Child Theme (Version 1.2.0) provided: https://github.com
 + 
 
 ### Shortcodes
-+ [post_date] 
-+ [wp_google_search] (requires setup)
-+ 
+#### post_date
+#### wp_google_search
+(requires setup)
+#### parent_finder
+Creates a button which links to the parent page of a child page.
 #### david_streamer
 Creates a hidden twitch stream which only reveals itself when the stream is live.
 
@@ -96,6 +98,6 @@ To disable all headers simply add “future=false current=false past=false”.
 
 
 ## Credits
-+ 
-+ 
++ Understrap Child Starter Theme https://github.com/understrap/understrap-child
++ Table Of Contents Code https://webdeasy.de/en/wordpress-table-of-contents-without-plugin
 + 

@@ -928,10 +928,11 @@ function mysite_customize_lazy_images( $blocked_classes ) {
 }
 
 /**
- * Adds a link to the WP Admin Bar.
+ * Adds links to the WP Admin Bar.
  */
 add_action('admin_bar_menu', 'wpb_custom_toolbar_link', 999);
 function wpb_custom_toolbar_link($wp_admin_bar) {
+	//Guide
     $args = array(
         'id' => 'guide',
         'title' => 'Guide', 
@@ -942,6 +943,17 @@ function wpb_custom_toolbar_link($wp_admin_bar) {
             )
     );
     $wp_admin_bar->add_node($args);
+	//Patterns
+	$args2 = array(
+        'id' => 'patterns',
+        'title' => 'Patterns', 
+        'href' => '/wp-admin/edit.php?post_type=wp_block&all_posts=1', 
+        'meta' => array(
+            'class' => 'patterns', 
+            'title' => 'Patterns'
+            )
+    );
+    $wp_admin_bar->add_node($args2);
 }
 
 /**
@@ -1013,14 +1025,14 @@ function chatbot_shortcode() {
  * Makes all new images alignment
  * wide by default (David Stockdale).
  */
-add_filter( 'block_type_metadata', 'set_image_auto_wide' );
-function set_image_auto_wide( $metadata ) {
-  if ( 'core/image' !== $metadata['name'] ) {
-	  return $metadata;
-  }
-  $metadata['attributes']['align']['default'] = 'wide';
-  return $metadata;
-}
+// add_filter( 'block_type_metadata', 'set_image_auto_wide' );
+// function set_image_auto_wide( $metadata ) {
+//   if ( 'core/image' !== $metadata['name'] ) {
+// 	  return $metadata;
+//   }
+// //  $metadata['attributes']['align']['default'] = 'wide';
+//   return $metadata;
+// }
 
 
 
@@ -1066,3 +1078,161 @@ function read_private_content(){
 	$contRole->add_cap( 'edit_posts' );
 }
 add_action( 'admin_init', 'read_private_content' );
+
+/**
+ * Adds shortcode (David Stockdale).
+ */
+add_shortcode( 'parent_finder', 'parent_finder_shortcode' );
+/**
+ * A button that loads the parent of the current page (David Stockdale).
+ * Shortcode should be something like this:
+ * [parent_finder]
+ */
+function parent_finder_shortcode() {
+	$link = get_permalink(get_post_parent(get_the_ID()));
+	return '<div class="wp-block-buttons"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-custom-width is-style-outline" style="width:100%; border-radius: 0;" href="'.$link.'">Go To Parent Page</a></div></div>';
+}
+
+
+
+/**
+ * Automatically add IDs to headings such as <h2></h2>
+ * (from webdeasy.de)
+ */
+function auto_id_headings( $content ) {
+  $content = preg_replace_callback('/(\<h[1-6](.*?))\>(.*)(<\/h[1-6]>)/i', function( $matches ) {
+    if(!stripos($matches[0], 'id=')) {
+      $matches[0] = $matches[1] . $matches[2] . ' id="' . sanitize_title( $matches[3] ) . '">' . $matches[3] . $matches[4];
+    }
+    return $matches[0];
+  }, $content);
+    return $content;
+}
+add_filter('the_content', 'auto_id_headings');
+function get_toc($content) {
+  // get headlines
+  $headings = get_headings($content, 1, 6);
+  // parse toc
+  ob_start();
+  echo "<div class='table-of-contents'>";
+  echo "<span class='toc-headline'>Table Of Contents</span>";
+  echo "<!-- Table of contents by webdeasy.de -->";
+  parse_toc($headings, 0, 0);
+  echo "</div>";
+  return ob_get_clean();
+}
+function parse_toc($headings, $index, $recursive_counter) {
+  // prevent errors
+  if($recursive_counter > 60 || !count($headings)) return;
+  // get all needed elements
+  $last_element = $index > 0 ? $headings[$index - 1] : NULL;
+  $current_element = $headings[$index];
+  $next_element = NULL;
+  if($index < count($headings) && isset($headings[$index + 1])) {
+    $next_element = $headings[$index + 1];
+  }
+  // end recursive calls
+  if($current_element == NULL) return;
+  // get all needed variables
+  $tag = intval($headings[$index]["tag"]);
+  $id = $headings[$index]["id"];
+  $classes = isset($headings[$index]["classes"]) ? $headings[$index]["classes"] : array();
+  $name = $headings[$index]["name"];
+  // element not in toc
+  if(isset($current_element["classes"]) && $current_element["classes"] && in_array("nitoc", $current_element["classes"])) {
+    parse_toc($headings, $index + 1, $recursive_counter + 1);
+    return;
+  }
+  // parse toc begin or toc subpart begin
+  if($last_element == NULL) echo "<ul>";
+  if($last_element != NULL && $last_element["tag"] < $tag) {
+    for($i = 0; $i < $tag - $last_element["tag"]; $i++) {
+      echo "<ul>";
+    }
+  }
+  // build li class
+  $li_classes = "";
+  if(isset($current_element["classes"]) && $current_element["classes"] && in_array("toc-bold", $current_element["classes"])) $li_classes = " class='bold'";
+  // parse line begin
+  echo "<li" . $li_classes .">";
+  // only parse name, when li is not bold
+  if(isset($current_element["classes"]) && $current_element["classes"] && in_array("toc-bold", $current_element["classes"])) {
+    echo $name;
+  } else {
+    echo "<a href='#" . $id . "'>" . $name . "</a>";
+  }
+  if($next_element && intval($next_element["tag"]) > $tag) {
+    parse_toc($headings, $index + 1, $recursive_counter + 1);
+  }
+  // parse line end
+  echo "</li>";
+  // parse next line
+  if($next_element && intval($next_element["tag"]) == $tag) {
+    parse_toc($headings, $index + 1, $recursive_counter + 1);
+  }
+  // parse toc end or toc subpart end
+  if ($next_element == NULL || ($next_element && $next_element["tag"] < $tag)) {
+    echo "</ul>";
+    if ($next_element && $tag - intval($next_element["tag"]) >= 2) {
+      echo "</li>";
+      for($i = 1; $i < $tag - intval($next_element["tag"]); $i++) {
+        echo "</ul>";
+      }
+    }
+  }
+  // parse top subpart
+  if($next_element != NULL && $next_element["tag"] < $tag) {
+    parse_toc($headings, $index + 1, $recursive_counter + 1);
+  }
+}
+function get_headings($content, $from_tag = 1, $to_tag = 6) {
+  $headings = array();
+  preg_match_all("/<h([" . $from_tag . "-" . $to_tag . "])([^<]*)>(.*)<\/h[" . $from_tag . "-" . $to_tag . "]>/", $content, $matches);
+  
+  for($i = 0; $i < count($matches[1]); $i++) {
+    $headings[$i]["tag"] = $matches[1][$i];
+    // get id
+    $att_string = $matches[2][$i];
+    preg_match("/id=\"([^\"]*)\"/", $att_string , $id_matches);
+    $headings[$i]["id"] = $id_matches[1];
+    // get classes
+    $att_string = $matches[2][$i];
+    preg_match_all("/class=\"([^\"]*)\"/", $att_string , $class_matches);
+    for($j = 0; $j < count($class_matches[1]); $j++) {
+      $headings[$i]["classes"] = explode(" ", $class_matches[1][$j]);
+    }
+    $headings[$i]["name"] = strip_tags($matches[3][$i]);
+  }
+  return $headings;
+}
+// TOC (from webdeasy.de)
+function toc_shortcode() {
+    return get_toc(auto_id_headings(get_the_content()));
+}
+add_shortcode('TOC', 'toc_shortcode');
+
+
+
+/**
+ * Hides/Shows something hidden by shortcode depending on the url.
+ * Query: ?submit=true
+ * To show if ?submit=true:
+ * [if-submit]
+ * your text here
+ * [/if-submit]
+ * To show otherwise:
+ * [if-not-submit]
+ * your text here
+ * [/if-not-submit]
+ */
+add_shortcode( 'if-submit', 'submit_hider' );
+add_shortcode( 'if-not-submit', 'submit_hider' );
+function submit_hider( $atts = [], $content = '', $tag = '' ) {
+    if ( 'if-submit' === $tag ) {
+        // Return $content if the URL query string has submit=true.
+        return ( isset( $_GET['submit'] ) && 'true' === $_GET['submit'] ) ? $content : '';
+    } else { // if-not-submit
+        // Return $content if the URL query string doesn't have submit=true.
+        return ( empty( $_GET['submit'] ) || 'true' !== $_GET['submit'] ) ? $content : '';
+    }
+}

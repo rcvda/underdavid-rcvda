@@ -1029,12 +1029,15 @@ h1 {
 .wp-block-buttons>.wp-block-button a {
 	padding: 17px 30px!important;
 	border-radius: 0px;
-	font-weight: 700!important;
-	font-size: 13.6px!important;
-	color: #ffffff!important;
-
+	font-weight: 700;
+	font-size: 13.6px;
 	width:100%;
 }
+.wp-block-buttons>.wp-block-button a:not(.has-text-color) {
+	color: #ffffff!important;
+}
+
+
 
 /**
  * Default colour of button block
@@ -1485,6 +1488,262 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 	content: '\f002';
 	font-weight: 600;
 }
+.hand-holding-heart-icon::before {
+	content: '\f4be';
+	font-weight: 600;
+}
+.heart-icon::before {
+	content: '\f004';
+	font-weight: 600;
+}
+.school-icon::before {
+	content: '\f549';
+	font-weight: 600;
+}
+.clipboard-icon::before {
+	content: '\f46d';
+	font-weight: 600;
+}
+.pound-icon::before {
+	content: '\f154';
+	font-weight: 600;
+}
+.search-dollar-icon::before {
+	content: '\f688';
+	font-weight: 600;
+}
+.funnel-dollar-icon::before {
+	content: '\f662';
+	font-weight: 600;
+}
+.building-icon::before {
+	content: '\f1ad';
+	font-weight: 600;
+}
+.city-icon::before {
+	content: '\f64f';
+	font-weight: 600;
+}
+.people-carry-icon::before {
+	content: '\f4ce';
+	font-weight: 600;
+}
+.walking-icon::before {
+	content: '\f554';
+	font-weight: 600;
+}
+.spell-check-icon::before {
+	content: '\f891';
+	font-weight: 600;
+}
+.wrench-icon::before {
+	content: '\f0ad';
+	font-weight: 600;
+}
+.window-maximise-icon::before {
+	content: '\f2d0';
+	font-weight: 600;
+}
+.window-minimise-icon::before {
+	content: '\f2d1';
+	font-weight: 600;
+}
+.window-close-icon::before {
+	content: '\f410';
+	font-weight: 600;
+}
+.window-restore-icon::before {
+	content: '\f2d2';
+	font-weight: 600;
+}
+.wifi-icon::before {
+	content: '\f1eb';
+	font-weight: 600;
+}
+.undo-icon::before {
+	content: '\f0e2';
+	font-weight: 600;
+}
+.redo-icon::before {
+	content: '\f01e';
+	font-weight: 600;
+}
+.table-icon::before {
+	content: '\f0ce';
+	font-weight: 600;
+}
+.tasks-icon::before {
+	content: '\f0ae';
+	font-weight: 600;
+}
+.sort-numeric-up-icon::before {
+	content: '\f163';
+	font-weight: 600;
+}
+.sort-numeric-down-icon::before {
+	content: '\f162';
+	font-weight: 600;
+}
+.sort-icon::before {
+	content: '\f0dc';
+	font-weight: 600;
+}
+.sign-in-icon::before {
+	content: '\f2f6';
+	font-weight: 600;
+}
+.sign-out-icon::before {
+	content: '\f2f5';
+	font-weight: 600;
+}
+.question-circle-icon::before {
+	content: '\f059';
+	font-weight: 600;
+}
+.qr-code-icon::before {
+	content: '\f029';
+	font-weight: 600;
+}
+.parking-sign-icon::before {
+	content: '\f540';
+	font-weight: 600;
+}
+.paperclip-icon::before {
+	content: '\f0c6';
+	font-weight: 600;
+}
+.lock-icon::before {
+	content: '\f023';
+	font-weight: 600;
+}
+.lock-open-icon::before {
+	content: '\f3c1';
+	font-weight: 600;
+}
+.list-icon::before {
+	content: '\f0ca';
+	font-weight: 600;
+}
+.less-than-icon::before {
+	content: '\f536';
+	font-weight: 600;
+}
+.user-friends-icon::before {
+	content: '\f500';
+	font-weight: 600;
+}
+.user-edit-icon::before {
+	content: '\f4ff';
+	font-weight: 600;
+}
+.user-icon::before {
+	content: '\f007';
+	font-weight: 600;
+}
+.user-circle-icon::before {
+	content: '\f2bd';
+	font-weight: 600;
+}
+.volume-up-icon::before {
+	content: '\f028';
+	font-weight: 600;
+}
+.volume-down-icon::before {
+	content: '\f027';
+	font-weight: 600;
+}
+.volume-mute-icon::before {
+	content: '\f6a9';
+	font-weight: 600;
+}
+.volume-off-icon::before {
+	content: '\f026';
+	font-weight: 600;
+}
+.video-icon::before {
+	content: '\f03d';
+	font-weight: 600;
+}
+.video-slash-icon::before {
+	content: '\f4e2';
+	font-weight: 600;
+}
+.rss-icon::before {
+	content: '\f09e';
+	font-weight: 600;
+}
+.route-icon::before {
+	content: '\f4d7';
+	font-weight: 600;
+}
+.shopping-cart-icon::before {
+	content: '\f07a';
+	font-weight: 600;
+}
+.burn-icon::before {
+	content: '\f46a';
+	font-weight: 600;
+}
+.wallet-icon::before {
+	content: '\f555';
+	font-weight: 600;
+}
+.balance-scale-icon::before {
+	content: '\f24e';
+	font-weight: 600;
+}
+.ad-icon::before {
+	content: '\f641';
+	font-weight: 600;
+}
+.calendar-check-icon::before {
+	content: '\f274';
+	font-weight: 600;
+}
+.book-icon::before {
+	content: '\f02d';
+	font-weight: 600;
+}
+.book-reader-icon::before {
+	content: '\f5da';
+	font-weight: 600;
+}
+.shopping-basket-icon::before {
+	content: '\f291';
+	font-weight: 600;
+}
+.chart-bar-icon::before {
+	content: '\f080';
+	font-weight: 600;
+}
+.tree-icon::before {
+	content: '\f1bb';
+	font-weight: 600;
+}
+.seedling-icon::before {
+	content: '\f4d8';
+	font-weight: 600;
+}
+.leaf-icon::before {
+	content: '\f06c';
+	font-weight: 600;
+}
+.mountain-icon::before {
+	content: '\f6fc';
+	font-weight: 600;
+}
+.cube-icon::before {
+	content: '\f1b2';
+	font-weight: 600;
+}
+.cubes-icon::before {
+	content: '\f1b3';
+	font-weight: 600;
+}
+.crown-icon::before {
+	content: '\f521';
+	font-weight: 600;
+}
 
 /**
  * Menu Experiments.
@@ -1797,3 +2056,54 @@ body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h
 			justify-content: center!important;
 	}
 }
+
+
+/**
+ * Media Text Block Default Padding Removed.
+ * Only if .padded class is not applied.
+ */
+.wp-block-media-text:not(.padded).has-media-on-the-right .wp-block-media-text__content {
+	padding-left: 0!important;
+}
+.wp-block-media-text:not(.padded):not(.has-media-on-the-right) .wp-block-media-text__content {
+	padding-right: 0!important;
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-media-text:not(.padded):is(.has-media-on-the-right):is(.is-stacked-on-mobile)>div.wp-block-media-text__content {
+		padding-right: 0!important;
+	}
+	.wp-block-media-text:not(.padded):not(.has-media-on-the-right):is(.is-stacked-on-mobile)>.wp-block-media-text__content {
+		padding-left: 0!important;
+	}
+}
+
+
+/**
+ * Reduces column gap to 25px.
+ */
+:where(.wp-block-columns.is-layout-flex) {
+    column-gap: 25px!important;
+}
+
+
+
+
+/**
+ * Forces the right column to
+ * stack on top of the left
+ * on mobile.
+ */
+@media (max-width: 781px) {
+	.wp-block-columns.reverse:not(.is-not-stacked-on-mobile)  {
+    flex-flow: column-reverse!important;
+	}
+}
+
+/**
+ * Adds padding to a column.
+ */
+.wp-block-column .padded {
+	padding: 8% 8%!important;
+}
+
