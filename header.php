@@ -42,26 +42,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 		   src="https://www.facebook.com/tr?id=<?php echo $api_key9; ?>&ev=PageView&noscript=1"/>
 	</noscript>
 	<!-- End Facebook Pixel Code -->
-	
+	<!-- Google Analytics Consent Defaults -->
 	<script>
-					  window.dataLayer = window.dataLayer || [];
-					  function gtag(){dataLayer.push(arguments);}
-						
-						gtag('consent', 'default', {
-							'ad_storage': 'granted',
-							'analytics_storage': 'granted',
-							'ad_user_data': 'denied',
-							'ad_personalization': 'denied'
-						});
-						
-						gtag('consent', 'default', {
-							'ad_user_data': 'granted',
-							'ad_personalization': 'granted',
-							'region': ['GB']
-						});
-						
-					</script>
-	
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		
+		gtag('consent', 'default', {
+			'ad_storage': 'granted',
+			'analytics_storage': 'granted',
+			'ad_user_data': 'denied',
+			'ad_personalization': 'denied'
+		});
+		
+		gtag('consent', 'default', {
+			'ad_user_data': 'granted',
+			'ad_personalization': 'granted',
+			'region': ['GB']
+		});
+	</script>
+	<!-- End Google Analytics Consent Defaults -->
 	<!--  Preload Logo Image -->
 	<link rel="preload" as="image" href="/wp-content/uploads/2023/07/RCVDA-Logo-without-Text-White-Outline-768x157-1.webp" async>
 	
