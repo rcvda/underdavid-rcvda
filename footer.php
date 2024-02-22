@@ -39,13 +39,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<script>
 					  window.dataLayer = window.dataLayer || [];
 					  function gtag(){dataLayer.push(arguments);}
-					  gtag('js', new Date());
-					  gtag('config', '<?php echo $api_key2; ?>');
-						
+						gtag('js', new Date());
+						gtag('config', '<?php echo $api_key2; ?>');
 						gtag('config', '<?php echo $api_key3; ?>');
-						
 						gtag('config', '<?php echo $api_key4; ?>');
-						
 					</script>
 					
 					<!-- Google Tag Manager -->

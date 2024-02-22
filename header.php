@@ -43,7 +43,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</noscript>
 	<!-- End Facebook Pixel Code -->
 	
-	
+	<script>
+					  window.dataLayer = window.dataLayer || [];
+					  function gtag(){dataLayer.push(arguments);}
+						
+						gtag('consent', 'default', {
+							'ad_storage': 'granted',
+							'analytics_storage': 'granted',
+							'ad_user_data': 'denied',
+							'ad_personalization': 'denied'
+						});
+						
+						gtag('consent', 'default', {
+							'ad_user_data': 'granted',
+							'ad_personalization': 'granted',
+							'region': ['GB']
+						});
+						
+					</script>
 	
 	<!--  Preload Logo Image -->
 	<link rel="preload" as="image" href="/wp-content/uploads/2023/07/RCVDA-Logo-without-Text-White-Outline-768x157-1.webp" async>
@@ -66,7 +83,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	
 	<?php if (is_front_page()) { ?>
 	<!-- 		Preload Top Image -->
-		<link rel="preload" as="image" href="/wp-content/uploads/2023/01/2023-Volunteers-Awards-Winners-Small.webp" async>
+		<link rel="preload" as="image" href="/wp-content/uploads/2023/08/our-press-replacement.webp" async>
 <!-- 	Preload Top 3 Images On Home (check what is visible on mobile) -->
 <!-- 		<link rel="preload" as="image" href="/wp-content/uploads/X" async> -->
 <!-- 		<link rel="preload" as="image" href="/wp-content/uploads/X" media="(min-width: 600px)" async> -->
@@ -79,7 +96,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
+
+	
+	
 <div class="site" id="page">
+	
+<!-- 	Meta Pixel PageView Tracking Attempt -->
+<!-- 	<script type='text/javascript'>
+		fbq('track', 'PageView', []);
+	</script> -->
+<!-- 	Meta Pixel PageView Tracking Attempt End -->
 	
 <!-- banner -->
 <?php
