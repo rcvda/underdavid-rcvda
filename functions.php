@@ -1254,14 +1254,15 @@ function vacancy_box_shortcode($atts) {
 
         // Get the current date
         $current = new DateTime('now');
-        $current_date = $current->format('d/m/Y H:i');
+		$current_date = $current->format('Y-m-d H:i:s');
+		
 
         // Get the target date from the shortcode attributes
-        $target = DateTime::createFromFormat('d/m/Y H:i', $atts['target_date']);
+        $target = DateTime::createFromFormat('d/m/Y G:i', $atts['target_date']);
 
         // Check if the target date is valid
         if ($target !== false) {
-            $target_date = $target->format('d/m/Y H:i');
+            $target_date = $target->format('Y-m-d H:i:s');
 
             // Check if the current date/time is after the target date
             // Return the HTML structure if the condition is met
@@ -1286,9 +1287,9 @@ function vacancy_box_shortcode($atts) {
                     <!-- /wp:group -->
                 ';
             }
-
+// 			$check = '<p>Current Date: ' . $current_date . ' Target Date: '. $target_date . '</p>';
             // If not after the target date, return an empty string
-            return '';
+            return ''. $check;
         }
     }
 
