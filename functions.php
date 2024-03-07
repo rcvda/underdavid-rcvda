@@ -1236,3 +1236,52 @@ function submit_hider( $atts = [], $content = '', $tag = '' ) {
         return ( empty( $_GET['submit'] ) || 'true' !== $_GET['submit'] ) ? $content : '';
     }
 }
+
+
+
+/**
+ * Adds shortcode (David Stockdale).
+ */
+add_shortcode('vacancy_box', 'vacancy_box_shortcode');
+/**
+ * Creates a Vacancy Box if the application deadline has passed (David Stockdale).
+ * Example use:
+ * [vacancy_box target_date="08/03/2024 12:00"]
+ */
+function vacancy_box_shortcode($atts) {
+	// Get the current date
+	$current = new DateTime('now');
+	$current_date = $current->format('d/m/Y H:i');
+
+    // Get the target date from the shortcode attributes
+	$target = DateTime::createFromFormat('d/m/Y H:i', $atts['target_date']);
+	$target_date = $target->format('d/m/Y H:i'); 
+	
+    // Check if the current date/time is after the target date
+    // Return the HTML structure if the condition is met
+    if ($current_date > $target_date) {
+        return '
+            <!-- wp:group {"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group"><!-- wp:spacer {"height":"10px"} -->
+            <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:columns {"backgroundColor":"rcvda-dark-blue"} -->
+            <div class="wp-block-columns has-rcvda-dark-blue-background-color has-background"><!-- wp:column -->
+            <div class="wp-block-column"><!-- wp:heading {"textAlign":"center","textColor":"rcvda-red"} -->
+            <h2 class="wp-block-heading has-text-align-center has-rcvda-red-color has-text-color">Vacancy Closed</h2>
+            <!-- /wp:heading --></div>
+            <!-- /wp:column --></div>
+            <!-- /wp:columns -->
+
+            <!-- wp:spacer {"height":"10px"} -->
+            <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer --></div>
+            <!-- /wp:group -->
+        ';
+    }
+	
+// 	$check = '<p>Current Date: ' . $current_date . ' Target Date: '. $target_date . '</p>';
+    // If not after the target date, return an empty string
+    return '';
+}
