@@ -1249,39 +1249,53 @@ add_shortcode('vacancy_box', 'vacancy_box_shortcode');
  * [vacancy_box target_date="08/03/2024 12:00"]
  */
 function vacancy_box_shortcode($atts) {
-	// Get the current date
-	$current = new DateTime('now');
-	$current_date = $current->format('d/m/Y H:i');
+    // Check if the 'target_date' attribute is set and not empty
+    if (isset($atts['target_date']) && !empty($atts['target_date'])) {
 
-    // Get the target date from the shortcode attributes
-	$target = DateTime::createFromFormat('d/m/Y H:i', $atts['target_date']);
-	$target_date = $target->format('d/m/Y H:i'); 
-	
-    // Check if the current date/time is after the target date
-    // Return the HTML structure if the condition is met
-    if ($current_date > $target_date) {
-        return '
-            <!-- wp:group {"layout":{"type":"constrained"}} -->
-            <div class="wp-block-group"><!-- wp:spacer {"height":"10px"} -->
-            <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
-            <!-- /wp:spacer -->
+        // Get the current date
+        $current = new DateTime('now');
+        $current_date = $current->format('d/m/Y H:i');
 
-            <!-- wp:columns {"backgroundColor":"rcvda-dark-blue"} -->
-            <div class="wp-block-columns has-rcvda-dark-blue-background-color has-background"><!-- wp:column -->
-            <div class="wp-block-column"><!-- wp:heading {"textAlign":"center","textColor":"rcvda-red"} -->
-            <h2 class="wp-block-heading has-text-align-center has-rcvda-red-color has-text-color">Vacancy Closed</h2>
-            <!-- /wp:heading --></div>
-            <!-- /wp:column --></div>
-            <!-- /wp:columns -->
+        // Get the target date from the shortcode attributes
+        $target = DateTime::createFromFormat('d/m/Y H:i', $atts['target_date']);
 
-            <!-- wp:spacer {"height":"10px"} -->
-            <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
-            <!-- /wp:spacer --></div>
-            <!-- /wp:group -->
-        ';
+        // Check if the target date is valid
+        if ($target !== false) {
+            $target_date = $target->format('d/m/Y H:i');
+
+            // Check if the current date/time is after the target date
+            // Return the HTML structure if the condition is met
+            if ($current_date > $target_date) {
+                return '
+                    <!-- wp:group {"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group"><!-- wp:spacer {"height":"10px"} -->
+                    <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:columns {"backgroundColor":"rcvda-dark-blue"} -->
+                    <div class="wp-block-columns has-rcvda-dark-blue-background-color has-background"><!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:heading {"textAlign":"center","textColor":"rcvda-red"} -->
+                    <h2 class="wp-block-heading has-text-align-center has-rcvda-red-color has-text-color">Vacancy Closed</h2>
+                    <!-- /wp:heading --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns -->
+
+                    <!-- wp:spacer {"height":"10px"} -->
+                    <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer --></div>
+                    <!-- /wp:group -->
+                ';
+            }
+
+            // If not after the target date, return an empty string
+            return '';
+        }
     }
-	
-// 	$check = '<p>Current Date: ' . $current_date . ' Target Date: '. $target_date . '</p>';
-    // If not after the target date, return an empty string
-    return '';
+
+    // Return an error message or handle the case when the 'target_date' attribute is missing or invalid
+    return '<p>Error: Invalid or missing target date attribute.</p>';
 }
+
+
+
+
