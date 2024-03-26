@@ -16,6 +16,7 @@ global $api_key4;
 global $api_key5;
 global $api_key6;
 global $api_key7;
+global $api_key10;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
