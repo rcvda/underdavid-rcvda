@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 					
 <!-- 					Preload Font Awsome -->
-					<script defer src="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js"></script>
+					<script defer src="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js">						</script>
 					
 					<!-- Global site tag (gtag.js) - Google Analytics -->
 					<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $api_key2; ?>"></script>
@@ -46,12 +46,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</script>
 					
 					<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','<?php echo $api_key5; ?>');</script>
-<!-- End Google Tag Manager -->
+					<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+					j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+					'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+					})(window,document,'script','dataLayer','<?php echo $api_key5; ?>');</script>
+					<!-- End Google Tag Manager -->
 
 					<!-- Event snippet for Page view conversion page -->
 					<script>
@@ -61,17 +61,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- 					Mailchimp -->
 <!-- 					<script async id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key7; ?>.js");</script> -->
 					
-		<script async id="mcjs">
-function showPopup() { 
-    !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key7; ?>.js");
-//unsetting the cookie
-    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";                  
-    document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-}
-    
-    document.getElementById("show-popup").onclick = function() { showPopup(); }
-</script>
+					<script async id="mcjs">
+						function showPopup() { 
+							!function(c,h,i,m,p){
+								m=c.createElement(h),
+									p=c.getElementsByTagName(h)[0],
+									m.async=1,
+									m.src=i,
+									p.parentNode.insertBefore(m,p)
+								}(
+									document,
+									"script",
+									"https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key7; ?>.js"
+								);
+								//unsetting the cookie
+								document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";           
+								document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+						}
 
+						document.getElementById("show-popup").onclick = function() { showPopup(); }
+
+
+						function showPopup2() { 
+							!function(c,h,i,m,p){
+								m=c.createElement(h),
+									p=c.getElementsByTagName(h)[0],
+									m.async=1,
+									m.src=i,
+									p.parentNode.insertBefore(m,p)
+								}(
+									document,
+									"script",
+									"https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key10; ?>.js"
+								);
+								//unsetting the cookie
+								document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";           
+								document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+						}
+
+						document.getElementById("show-popup2").onclick = function() { showPopup2(); }
+					</script>
+<!-- 				End Mailchimp -->
 					<div class="site-info">
 						
 						<?php understrap_site_info(); ?>
