@@ -42,8 +42,8 @@
   },
   "homepage": "https://understrap.com",
   "devDependencies": {
-    "@babel/core": "^7.24.3",
-    "@babel/preset-env": "^7.24.3",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -54,7 +54,7 @@
     "bootstrap": "^5.3.3",
     "browser-sync": "^3.0.2",
     "browserslist": "^4.23.0",
-    "caniuse-lite": "^1.0.30001600",
+    "caniuse-lite": "^1.0.30001612",
     "clean-css-cli": "^5.6.3",
     "font-awesome": "^4.7.0",
     "nodemon": "^3.1.0",
@@ -62,9 +62,9 @@
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^4.13.0",
-    "sass": "^1.72.0",
-    "terser": "^5.29.2",
+    "rollup": "^4.16.1",
+    "sass": "^1.75.0",
+    "terser": "^5.30.4",
     "understrap": "github:understrap/understrap#develop"
   },
   "dependencies": {

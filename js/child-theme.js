@@ -2734,7 +2734,7 @@
 
 	function listScrollParents(element, list) {
 	  var _element$ownerDocumen;
-	  if (list === void 0) {
+	  {
 	    list = [];
 	  }
 	  var scrollParent = getScrollParent(element);
