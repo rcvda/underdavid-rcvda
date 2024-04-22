@@ -1246,7 +1246,8 @@ add_shortcode('vacancy_box', 'vacancy_box_shortcode');
 /**
  * Creates a Vacancy Box if the application deadline has passed (David Stockdale).
  * Example use:
- * [vacancy_box target_date="08/03/2024 12:00"]
+ * Vacancy: [vacancy_box target_date="08/03/2024 12:00"]
+ * Opportunity: [vacancy_box target_date="08/03/2024 12:00" type="opportunity"]
  */
 function vacancy_box_shortcode($atts) {
     // Check if the 'target_date' attribute is set and not empty
@@ -1256,7 +1257,6 @@ function vacancy_box_shortcode($atts) {
         $current = new DateTime('now');
 		$current_date = $current->format('Y-m-d H:i:s');
 		
-
         // Get the target date from the shortcode attributes
         $target = DateTime::createFromFormat('d/m/Y G:i', $atts['target_date']);
 
@@ -1267,25 +1267,27 @@ function vacancy_box_shortcode($atts) {
             // Check if the current date/time is after the target date
             // Return the HTML structure if the condition is met
             if ($current_date > $target_date) {
-                return '
-                    <!-- wp:group {"layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group"><!-- wp:spacer {"height":"10px"} -->
-                    <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
-                    <!-- /wp:spacer -->
-
-                    <!-- wp:columns {"backgroundColor":"rcvda-dark-blue"} -->
-                    <div class="wp-block-columns has-rcvda-dark-blue-background-color has-background"><!-- wp:column -->
-                    <div class="wp-block-column"><!-- wp:heading {"textAlign":"center","textColor":"rcvda-red"} -->
-                    <h2 class="wp-block-heading has-text-align-center has-rcvda-red-color has-text-color">Vacancy Closed</h2>
-                    <!-- /wp:heading --></div>
-                    <!-- /wp:column --></div>
-                    <!-- /wp:columns -->
-
-                    <!-- wp:spacer {"height":"10px"} -->
-                    <div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
-                    <!-- /wp:spacer --></div>
-                    <!-- /wp:group -->
-                ';
+				$result = '
+				<div class="wp-block-group">
+				<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+				<div class="wp-block-columns has-rcvda-dark-blue-background-color has-background">
+				<div class="wp-block-column">
+				<h2 class="wp-block-heading has-text-align-center has-rcvda-red-color has-text-color">';
+				
+				if (isset($atts['type']) && !empty($atts['type'])) {
+					$type = $atts['type'];
+					if($type = "opportunity") {
+						$result .= 'Opportunity Ended';
+					} else {
+						$result .= 'Vacancy Closed';
+					}
+				} else {
+					$result .= 'Vacancy Closed';
+				}
+				$result .= '
+				</h2></div></div>
+				<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div></div>';
+				return $result;
             }
 // 			$check = '<p>Current Date: ' . $current_date . ' Target Date: '. $target_date . '</p>';
             // If not after the target date, return an empty string
@@ -1296,6 +1298,7 @@ function vacancy_box_shortcode($atts) {
     // Return an error message or handle the case when the 'target_date' attribute is missing or invalid
     return '<p>Error: Invalid or missing target date attribute.</p>';
 }
+
 
 
 
