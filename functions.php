@@ -1299,7 +1299,26 @@ function vacancy_box_shortcode($atts) {
     return '<p>Error: Invalid or missing target date attribute.</p>';
 }
 
-
-
+/**
+ * Adds shortcode (David Stockdale).
+ */
+add_action( 'wpforms_wp_footer_end', 'wpf_dev_disable_field', 30 );
+/**
+ * Makes WPForm fields read-only.
+ * To apply, add CSS class 'wpf-disable-field' (no quotes) to field in form builder.
+ */
+function wpf_dev_disable_field() {
+    ?>
+    <script type="text/javascript">
+    jQuery(function($) {
+        // Target input, textarea, and select elements with the specified class
+        $( '.wpf-disable-field input, .wpf-disable-field textarea, .wpf-disable-field select' ).attr({
+             readonly: "readonly",
+             tabindex: "-1"
+        });
+    });
+    </script>
+    <?php
+}
 
 
