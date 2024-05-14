@@ -1312,10 +1312,14 @@ function wpf_dev_disable_field() {
     <script type="text/javascript">
     jQuery(function($) {
         // Target input, textarea, and select elements with the specified class
-        $( '.wpf-disable-field input, .wpf-disable-field textarea, .wpf-disable-field select' ).attr({
+        $( '.wpf-disable-field input, .wpf-disable-field textarea, .wpf-disable-field select ' ).attr({
              readonly: "readonly",
              tabindex: "-1"
         });
+		$( '.wpf-disable-field, .fa-chevron-down' ).on('click', function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+		});
     });
     </script>
     <?php
