@@ -2168,7 +2168,7 @@ sup {
 
 a {
   color: var(--bs-link-color);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -2471,8 +2471,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0000ee;
-  --bs-link-hover-color: shift-color(#0000ee, 20%);
+  --bs-link-color: #0000ee !important;
+  --bs-link-hover-color: shift-color(#0000ee !important, 20%);
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -2910,8 +2910,8 @@ progress {
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #0000ee;
-  --bs-link-hover-color: shift-color(#0000ee, 20%);
+  --bs-link-color: #0000ee !important;
+  --bs-link-hover-color: shift-color(#0000ee !important, 20%);
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }

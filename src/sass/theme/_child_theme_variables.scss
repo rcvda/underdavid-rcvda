@@ -538,8 +538,8 @@ $headings-color:              null !default;
 //
 // Style anchor elements.
 
-$link-color:                              #0000ee !default;
-$link-decoration:                         none !default;
+$link-color:                              #0000ee !important;
+$link-decoration:                         none !important;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   none !default;
