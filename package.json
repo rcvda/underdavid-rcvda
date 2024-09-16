@@ -43,7 +43,7 @@
   "homepage": "https://understrap.com",
   "devDependencies": {
     "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-env": "^7.25.4",
     "@popperjs/core": "^2.11.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -54,21 +54,21 @@
     "bootstrap": "^5.3.3",
     "browser-sync": "^3.0.2",
     "browserslist": "^4.23.3",
-    "caniuse-lite": "^1.0.30001651",
+    "caniuse-lite": "^1.0.30001660",
     "clean-css-cli": "^5.6.3",
     "font-awesome": "^4.7.0",
     "nodemon": "^3.1.4",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.41",
+    "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
-    "rollup": "^4.20.0",
-    "sass": "^1.77.8",
-    "terser": "^5.31.5",
+    "rollup": "^4.21.3",
+    "sass": "^1.78.0",
+    "terser": "^5.32.0",
     "understrap": "github:understrap/understrap#develop"
   },
   "dependencies": {
-    "npm-check-updates": "^17.0.5",
+    "npm-check-updates": "^17.1.1",
     "repair": "^0.1.1"
   }
 }
