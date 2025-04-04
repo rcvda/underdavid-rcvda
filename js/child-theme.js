@@ -14,7 +14,7 @@
 	}
 
 	function getAugmentedNamespace(n) {
-	  if (n.__esModule) return n;
+	  if (Object.prototype.hasOwnProperty.call(n, '__esModule')) return n;
 	  var f = n.default;
 		if (typeof f == "function") {
 			var a = function a () {
@@ -45,8 +45,8 @@
 	var data$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap data.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap data.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var data = data$1.exports;
@@ -118,8 +118,8 @@
 	var util$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap index.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap index.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var util = util$1.exports;
@@ -281,7 +281,7 @@
 			   * @param {HTMLElement} element
 			   * @return void
 			   *
-			   * @see https://www.charistheo.io/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
+			   * @see https://www.harrytheo.com/blog/2021/02/restart-a-css-animation-with-javascript/#restarting-a-css-animation
 			   */
 			  const reflow = element => {
 			    element.offsetHeight; // eslint-disable-line no-unused-expressions
@@ -326,7 +326,7 @@
 			    });
 			  };
 			  const execute = (possibleCallback, args = [], defaultValue = possibleCallback) => {
-			    return typeof possibleCallback === 'function' ? possibleCallback(...args) : defaultValue;
+			    return typeof possibleCallback === 'function' ? possibleCallback.call(...args) : defaultValue;
 			  };
 			  const executeAfterTransition = (callback, transitionElement, waitForTransition = true) => {
 			    if (!waitForTransition) {
@@ -406,8 +406,8 @@
 	}
 
 	/*!
-	  * Bootstrap event-handler.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap event-handler.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var eventHandler = eventHandler$1.exports;
@@ -652,8 +652,8 @@
 	var manipulator$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap manipulator.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap manipulator.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var manipulator = manipulator$1.exports;
@@ -714,7 +714,7 @@
 			      const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs') && !key.startsWith('bsConfig'));
 			      for (const key of bsKeys) {
 			        let pureKey = key.replace(/^bs/, '');
-			        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
+			        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1);
 			        attributes[pureKey] = normalizeData(element.dataset[key]);
 			      }
 			      return attributes;
@@ -730,8 +730,8 @@
 	}
 
 	/*!
-	  * Bootstrap config.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap config.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var config = config$1.exports;
@@ -803,8 +803,8 @@
 	}
 
 	/*!
-	  * Bootstrap base-component.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap base-component.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var baseComponent = baseComponent$1.exports;
@@ -829,7 +829,7 @@
 			  /**
 			   * Constants
 			   */
-			  const VERSION = '5.3.3';
+			  const VERSION = '5.3.4';
 
 			  /**
 			   * Class definition
@@ -896,8 +896,8 @@
 	var selectorEngine$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap selector-engine.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var selectorEngine = selectorEngine$1.exports;
@@ -1006,8 +1006,8 @@
 	}
 
 	/*!
-	  * Bootstrap component-functions.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap component-functions.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var componentFunctions = componentFunctions$1.exports;
@@ -1055,8 +1055,8 @@
 	}
 
 	/*!
-	  * Bootstrap alert.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap alert.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var alert$1 = alert$2.exports;
@@ -1155,8 +1155,8 @@
 	var button$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap button.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap button.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var button$1 = button$2.exports;
@@ -1246,8 +1246,8 @@
 	var swipe$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap swipe.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap swipe.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var swipe = swipe$1.exports;
@@ -1386,8 +1386,8 @@
 	}
 
 	/*!
-	  * Bootstrap carousel.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap carousel.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var carousel$1 = carousel$2.exports;
@@ -1784,8 +1784,8 @@
 	var collapse$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap collapse.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap collapse.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var collapse$1 = collapse$2.exports;
@@ -2205,10 +2205,10 @@
 	}
 
 	function getBoundingClientRect(element, includeScale, isFixedStrategy) {
-	  if (includeScale === undefined) {
+	  if (includeScale === void 0) {
 	    includeScale = false;
 	  }
-	  if (isFixedStrategy === undefined) {
+	  if (isFixedStrategy === void 0) {
 	    isFixedStrategy = false;
 	  }
 	  var clientRect = element.getBoundingClientRect();
@@ -2439,7 +2439,7 @@
 	  var state = _ref2.state,
 	    options = _ref2.options;
 	  var _options$element = options.element,
-	    arrowElement = _options$element === undefined ? '[data-popper-arrow]' : _options$element;
+	    arrowElement = _options$element === void 0 ? '[data-popper-arrow]' : _options$element;
 	  if (arrowElement == null) {
 	    return;
 	  } // CSS selector
@@ -2501,9 +2501,9 @@
 	    roundOffsets = _ref2.roundOffsets,
 	    isFixed = _ref2.isFixed;
 	  var _offsets$x = offsets.x,
-	    x = _offsets$x === undefined ? 0 : _offsets$x,
+	    x = _offsets$x === void 0 ? 0 : _offsets$x,
 	    _offsets$y = offsets.y,
-	    y = _offsets$y === undefined ? 0 : _offsets$y;
+	    y = _offsets$y === void 0 ? 0 : _offsets$y;
 	  var _ref3 = typeof roundOffsets === 'function' ? roundOffsets({
 	    x: x,
 	    y: y
@@ -2570,11 +2570,11 @@
 	  var state = _ref5.state,
 	    options = _ref5.options;
 	  var _options$gpuAccelerat = options.gpuAcceleration,
-	    gpuAcceleration = _options$gpuAccelerat === undefined ? true : _options$gpuAccelerat,
+	    gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
 	    _options$adaptive = options.adaptive,
-	    adaptive = _options$adaptive === undefined ? true : _options$adaptive,
+	    adaptive = _options$adaptive === void 0 ? true : _options$adaptive,
 	    _options$roundOffsets = options.roundOffsets,
-	    roundOffsets = _options$roundOffsets === undefined ? true : _options$roundOffsets;
+	    roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
 	  var commonStyles = {
 	    placement: getBasePlacement(state.placement),
 	    variation: getVariation(state.placement),
@@ -2620,9 +2620,9 @@
 	    instance = _ref.instance,
 	    options = _ref.options;
 	  var _options$scroll = options.scroll,
-	    scroll = _options$scroll === undefined ? true : _options$scroll,
+	    scroll = _options$scroll === void 0 ? true : _options$scroll,
 	    _options$resize = options.resize,
-	    resize = _options$resize === undefined ? true : _options$resize;
+	    resize = _options$resize === void 0 ? true : _options$resize;
 	  var window = getWindow(state.elements.popper);
 	  var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
 	  if (scroll) {
@@ -2728,7 +2728,7 @@
 	  var _element$ownerDocumen;
 	  var html = getDocumentElement(element);
 	  var winScroll = getWindowScroll(element);
-	  var body = (_element$ownerDocumen = element.ownerDocument) == null ? undefined : _element$ownerDocumen.body;
+	  var body = (_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body;
 	  var width = max(html.scrollWidth, html.clientWidth, body ? body.scrollWidth : 0, body ? body.clientWidth : 0);
 	  var height = max(html.scrollHeight, html.clientHeight, body ? body.scrollHeight : 0, body ? body.clientHeight : 0);
 	  var x = -winScroll.scrollLeft + getWindowScrollBarX(element);
@@ -2773,11 +2773,11 @@
 
 	function listScrollParents(element, list) {
 	  var _element$ownerDocumen;
-	  if (list === undefined) {
+	  if (list === void 0) {
 	    list = [];
 	  }
 	  var scrollParent = getScrollParent(element);
-	  var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? undefined : _element$ownerDocumen.body);
+	  var isBody = scrollParent === ((_element$ownerDocumen = element.ownerDocument) == null ? void 0 : _element$ownerDocumen.body);
 	  var win = getWindow(scrollParent);
 	  var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
 	  var updatedList = list.concat(target);
@@ -2902,24 +2902,24 @@
 	}
 
 	function detectOverflow(state, options) {
-	  if (options === undefined) {
+	  if (options === void 0) {
 	    options = {};
 	  }
 	  var _options = options,
 	    _options$placement = _options.placement,
-	    placement = _options$placement === undefined ? state.placement : _options$placement,
+	    placement = _options$placement === void 0 ? state.placement : _options$placement,
 	    _options$strategy = _options.strategy,
-	    strategy = _options$strategy === undefined ? state.strategy : _options$strategy,
+	    strategy = _options$strategy === void 0 ? state.strategy : _options$strategy,
 	    _options$boundary = _options.boundary,
-	    boundary = _options$boundary === undefined ? clippingParents : _options$boundary,
+	    boundary = _options$boundary === void 0 ? clippingParents : _options$boundary,
 	    _options$rootBoundary = _options.rootBoundary,
-	    rootBoundary = _options$rootBoundary === undefined ? viewport : _options$rootBoundary,
+	    rootBoundary = _options$rootBoundary === void 0 ? viewport : _options$rootBoundary,
 	    _options$elementConte = _options.elementContext,
-	    elementContext = _options$elementConte === undefined ? popper : _options$elementConte,
+	    elementContext = _options$elementConte === void 0 ? popper : _options$elementConte,
 	    _options$altBoundary = _options.altBoundary,
-	    altBoundary = _options$altBoundary === undefined ? false : _options$altBoundary,
+	    altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary,
 	    _options$padding = _options.padding,
-	    padding = _options$padding === undefined ? 0 : _options$padding;
+	    padding = _options$padding === void 0 ? 0 : _options$padding;
 	  var paddingObject = mergePaddingObject(typeof padding !== 'number' ? padding : expandToHashMap(padding, basePlacements));
 	  var altContext = elementContext === popper ? reference : popper;
 	  var popperRect = state.rects.popper;
@@ -2929,7 +2929,6 @@
 	  var popperOffsets = computeOffsets({
 	    reference: referenceClientRect,
 	    element: popperRect,
-	    strategy: 'absolute',
 	    placement: placement
 	  });
 	  var popperClientRect = rectToClientRect(Object.assign({}, popperRect, popperOffsets));
@@ -2956,7 +2955,7 @@
 	}
 
 	function computeAutoPlacement(state, options) {
-	  if (options === undefined) {
+	  if (options === void 0) {
 	    options = {};
 	  }
 	  var _options = options,
@@ -2966,7 +2965,7 @@
 	    padding = _options.padding,
 	    flipVariations = _options.flipVariations,
 	    _options$allowedAutoP = _options.allowedAutoPlacements,
-	    allowedAutoPlacements = _options$allowedAutoP === undefined ? placements : _options$allowedAutoP;
+	    allowedAutoPlacements = _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
 	  var variation = getVariation(placement);
 	  var placements$1 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function (placement) {
 	    return getVariation(placement) === variation;
@@ -3007,16 +3006,16 @@
 	    return;
 	  }
 	  var _options$mainAxis = options.mainAxis,
-	    checkMainAxis = _options$mainAxis === undefined ? true : _options$mainAxis,
+	    checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis,
 	    _options$altAxis = options.altAxis,
-	    checkAltAxis = _options$altAxis === undefined ? true : _options$altAxis,
+	    checkAltAxis = _options$altAxis === void 0 ? true : _options$altAxis,
 	    specifiedFallbackPlacements = options.fallbackPlacements,
 	    padding = options.padding,
 	    boundary = options.boundary,
 	    rootBoundary = options.rootBoundary,
 	    altBoundary = options.altBoundary,
 	    _options$flipVariatio = options.flipVariations,
-	    flipVariations = _options$flipVariatio === undefined ? true : _options$flipVariatio,
+	    flipVariations = _options$flipVariatio === void 0 ? true : _options$flipVariatio,
 	    allowedAutoPlacements = options.allowedAutoPlacements;
 	  var preferredPlacement = state.options.placement;
 	  var basePlacement = getBasePlacement(preferredPlacement);
@@ -3112,7 +3111,7 @@
 	};
 
 	function getSideOffsets(overflow, rect, preventedOffsets) {
-	  if (preventedOffsets === undefined) {
+	  if (preventedOffsets === void 0) {
 	    preventedOffsets = {
 	      x: 0,
 	      y: 0
@@ -3189,7 +3188,7 @@
 	    options = _ref2.options,
 	    name = _ref2.name;
 	  var _options$offset = options.offset,
-	    offset = _options$offset === undefined ? [0, 0] : _options$offset;
+	    offset = _options$offset === void 0 ? [0, 0] : _options$offset;
 	  var data = placements.reduce(function (acc, placement) {
 	    acc[placement] = distanceAndSkiddingToXY(placement, state.rects, offset);
 	    return acc;
@@ -3222,7 +3221,6 @@
 	  state.modifiersData[name] = computeOffsets({
 	    reference: state.rects.reference,
 	    element: state.rects.popper,
-	    strategy: 'absolute',
 	    placement: state.placement
 	  });
 	} // eslint-disable-next-line import/no-unused-modules
@@ -3244,17 +3242,17 @@
 	    options = _ref.options,
 	    name = _ref.name;
 	  var _options$mainAxis = options.mainAxis,
-	    checkMainAxis = _options$mainAxis === undefined ? true : _options$mainAxis,
+	    checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis,
 	    _options$altAxis = options.altAxis,
-	    checkAltAxis = _options$altAxis === undefined ? false : _options$altAxis,
+	    checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis,
 	    boundary = options.boundary,
 	    rootBoundary = options.rootBoundary,
 	    altBoundary = options.altBoundary,
 	    padding = options.padding,
 	    _options$tether = options.tether,
-	    tether = _options$tether === undefined ? true : _options$tether,
+	    tether = _options$tether === void 0 ? true : _options$tether,
 	    _options$tetherOffset = options.tetherOffset,
-	    tetherOffset = _options$tetherOffset === undefined ? 0 : _options$tetherOffset;
+	    tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
 	  var overflow = detectOverflow(state, {
 	    boundary: boundary,
 	    rootBoundary: rootBoundary,
@@ -3318,7 +3316,7 @@
 	    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis : maxLen + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis;
 	    var arrowOffsetParent = state.elements.arrow && getOffsetParent(state.elements.arrow);
 	    var clientOffset = arrowOffsetParent ? mainAxis === 'y' ? arrowOffsetParent.clientTop || 0 : arrowOffsetParent.clientLeft || 0 : 0;
-	    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? undefined : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
+	    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
 	    var tetherMin = offset + minOffset - offsetModifierValue - clientOffset;
 	    var tetherMax = offset + maxOffset - offsetModifierValue;
 	    var preventedOffset = within(tether ? min(min$1, tetherMin) : min$1, offset, tether ? max(max$1, tetherMax) : max$1);
@@ -3334,7 +3332,7 @@
 	    var _min = _offset + overflow[_mainSide];
 	    var _max = _offset - overflow[_altSide];
 	    var isOriginSide = [top, left].indexOf(basePlacement) !== -1;
-	    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? undefined : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
+	    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
 	    var _tetherMin = isOriginSide ? _min : _offset - referenceRect[_len] - popperRect[_len] - _offsetModifierValue + normalizedTetherOffsetValue.altAxis;
 	    var _tetherMax = isOriginSide ? _offset + referenceRect[_len] + popperRect[_len] - _offsetModifierValue - normalizedTetherOffsetValue.altAxis : _max;
 	    var _preventedOffset = tether && isOriginSide ? withinMaxClamp(_tetherMin, _offset, _tetherMax) : within(tether ? _tetherMin : _min, _offset, tether ? _tetherMax : _max);
@@ -3376,7 +3374,7 @@
 	// Composite means it takes into account transforms as well as layout.
 
 	function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
-	  if (isFixed === undefined) {
+	  if (isFixed === void 0) {
 	    isFixed = false;
 	  }
 	  var isOffsetParentAnElement = isHTMLElement(offsetParent);
@@ -3497,16 +3495,16 @@
 	  });
 	}
 	function popperGenerator(generatorOptions) {
-	  if (generatorOptions === undefined) {
+	  if (generatorOptions === void 0) {
 	    generatorOptions = {};
 	  }
 	  var _generatorOptions = generatorOptions,
 	    _generatorOptions$def = _generatorOptions.defaultModifiers,
-	    defaultModifiers = _generatorOptions$def === undefined ? [] : _generatorOptions$def,
+	    defaultModifiers = _generatorOptions$def === void 0 ? [] : _generatorOptions$def,
 	    _generatorOptions$def2 = _generatorOptions.defaultOptions,
-	    defaultOptions = _generatorOptions$def2 === undefined ? DEFAULT_OPTIONS : _generatorOptions$def2;
+	    defaultOptions = _generatorOptions$def2 === void 0 ? DEFAULT_OPTIONS : _generatorOptions$def2;
 	  return function createPopper(reference, popper, options) {
-	    if (options === undefined) {
+	    if (options === void 0) {
 	      options = defaultOptions;
 	    }
 	    var state = {
@@ -3588,7 +3586,7 @@
 	          var _state$orderedModifie = state.orderedModifiers[index],
 	            fn = _state$orderedModifie.fn,
 	            _state$orderedModifie2 = _state$orderedModifie.options,
-	            _options = _state$orderedModifie2 === undefined ? {} : _state$orderedModifie2,
+	            _options = _state$orderedModifie2 === void 0 ? {} : _state$orderedModifie2,
 	            name = _state$orderedModifie.name;
 	          if (typeof fn === 'function') {
 	            state = fn({
@@ -3630,7 +3628,7 @@
 	      state.orderedModifiers.forEach(function (_ref) {
 	        var name = _ref.name,
 	          _ref$options = _ref.options,
-	          options = _ref$options === undefined ? {} : _ref$options,
+	          options = _ref$options === void 0 ? {} : _ref$options,
 	          effect = _ref.effect;
 	        if (typeof effect === 'function') {
 	          var cleanupFn = effect({
@@ -3710,8 +3708,8 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap dropdown.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var dropdown$1 = dropdown$2.exports;
@@ -3925,7 +3923,7 @@
 			    }
 			    _createPopper() {
 			      if (typeof Popper__namespace === 'undefined') {
-			        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
+			        throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org/docs/v2/)');
 			      }
 			      let referenceElement = this._element;
 			      if (this._config.reference === 'parent') {
@@ -4004,7 +4002,7 @@
 			      }
 			      return {
 			        ...defaultBsPopperConfig,
-			        ...index_js.execute(this._config.popperConfig, [defaultBsPopperConfig])
+			        ...index_js.execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
 			      };
 			    }
 			    _selectMenuItem({
@@ -4128,8 +4126,8 @@
 	var backdrop$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap backdrop.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap backdrop.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var backdrop = backdrop$1.exports;
@@ -4274,8 +4272,8 @@
 	var focustrap$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap focustrap.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap focustrap.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var focustrap = focustrap$1.exports;
@@ -4394,8 +4392,8 @@
 	var scrollbar$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollbar.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap scrollbar.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var scrollbar = scrollbar$1.exports;
@@ -4512,8 +4510,8 @@
 	}
 
 	/*!
-	  * Bootstrap modal.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap modal.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var modal$1 = modal$2.exports;
@@ -4842,8 +4840,8 @@
 	var offcanvas$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap offcanvas.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var offcanvas$1 = offcanvas$2.exports;
@@ -5102,8 +5100,8 @@
 	var sanitizer$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap sanitizer.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap sanitizer.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var sanitizer = sanitizer$1.exports;
@@ -5226,8 +5224,8 @@
 	var templateFactory$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap template-factory.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap template-factory.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var templateFactory = templateFactory$1.exports;
@@ -5364,7 +5362,7 @@
 			      return this._config.sanitize ? sanitizer_js.sanitizeHtml(arg, this._config.allowList, this._config.sanitizeFn) : arg;
 			    }
 			    _resolvePossibleFunction(arg) {
-			      return index_js.execute(arg, [this]);
+			      return index_js.execute(arg, [undefined, this]);
 			    }
 			    _putElementInTemplate(element, templateElement) {
 			      if (this._config.html) {
@@ -5382,8 +5380,8 @@
 	}
 
 	/*!
-	  * Bootstrap tooltip.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap tooltip.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var tooltip$1 = tooltip$2.exports;
@@ -5506,7 +5504,7 @@
 			  class Tooltip extends BaseComponent {
 			    constructor(element, config) {
 			      if (typeof Popper__namespace === 'undefined') {
-			        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
+			        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org/docs/v2/)');
 			      }
 			      super(element, config);
 
@@ -5552,7 +5550,6 @@
 			      if (!this._isEnabled) {
 			        return;
 			      }
-			      this._activeTrigger.click = !this._activeTrigger.click;
 			      if (this._isShown()) {
 			        this._leave();
 			        return;
@@ -5740,7 +5737,7 @@
 			      return offset;
 			    }
 			    _resolvePossibleFunction(arg) {
-			      return index_js.execute(arg, [this._element]);
+			      return index_js.execute(arg, [this._element, this._element]);
 			    }
 			    _getPopperConfig(attachment) {
 			      const defaultBsPopperConfig = {
@@ -5778,7 +5775,7 @@
 			      };
 			      return {
 			        ...defaultBsPopperConfig,
-			        ...index_js.execute(this._config.popperConfig, [defaultBsPopperConfig])
+			        ...index_js.execute(this._config.popperConfig, [undefined, defaultBsPopperConfig])
 			      };
 			    }
 			    _setListeners() {
@@ -5937,8 +5934,8 @@
 	}
 
 	/*!
-	  * Bootstrap popover.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap popover.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var popover$1 = popover$2.exports;
@@ -6043,8 +6040,8 @@
 	var scrollspy$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap scrollspy.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var scrollspy$1 = scrollspy$2.exports;
@@ -6328,8 +6325,8 @@
 	var tab$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap tab.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap tab.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var tab$1 = tab$2.exports;
@@ -6623,8 +6620,8 @@
 	var toast$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap toast.js v5.3.3 (https://getbootstrap.com/)
-	  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+	  * Bootstrap toast.js v5.3.4 (https://getbootstrap.com/)
+	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
 	var toast$1 = toast$2.exports;
