@@ -75,7 +75,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		  crossorigin="anonymous" async>
 	
 <!-- 	Preload Font Awsome -->
-	<link async rel="preload" href="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js" as="script" />
+	<link async rel="preload" href="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-6.7.2-web/js/all.js" as="script" />
 	
 <!-- 	Preload Favicon? -->
 	<link rel="preload" as="image" media=”all” href="/wp-content/uploads/2023/07/cropped-RCVDA-Favicon-White-Border-32x32.webp" async>

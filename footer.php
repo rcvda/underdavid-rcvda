@@ -32,8 +32,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 					
-<!-- 					Preload Font Awsome -->
-					<script defer src="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-5.14.0-web/js/all.js">						</script>
+<!-- 	Preload Font Awsome -->
+					<script defer src="/wp-content/themes/underdavid-rcvda/fonts/fontawesome-free-6.7.2-web/js/all.js">						</script>
 					
 					<!-- Global site tag (gtag.js) - Google Analytics -->
 					<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $api_key2; ?>"></script>
