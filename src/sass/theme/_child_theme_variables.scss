@@ -1,0 +1,2109 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+
+$purple: #5533ff; // Thats a sample how you could change a BootStrap variable.
+//$primary: $purple;  // Once we've changed the value, we'll also make it the primary brand color.
+
+
+
+$primary: #0571ff;
+
+
+ul.socialiconz {
+	margin-left:0px!important;
+	margin-right:0px!important;
+	padding-left:0px!important;
+	margin-top:0px!important;
+	margin-bottom:0px!important;
+	float: none;
+	display: inline-block;
+}
+ul.socialiconz li { 
+	display: inline!important;
+	float:right!important;
+	height:25px!important;
+	padding-left:10px;
+} 
+ul.socialiconz li a svg { 
+	width:25px!important;
+	height:25px!important;
+} 
+.navbar-brand {
+	margin-right: 0rem!important;
+}
+
+/**
+ * Hides duplicate names
+ * created by co-authors.
+ */
+.entry-footer {
+	visibility:collapse;
+	font-size:0rem;
+}
+.entry-footer > aside {
+	visibility:visible!important;
+	font-size:1rem;
+}
+.entry-footer > span  {
+	visibility:visible!important;
+	font-size:1rem;
+}
+
+/*
+ * forces word break
+ * on excerpts
+ */
+.entry-content > div >div>p{
+	word-break:break-word!important;
+}
+
+/**
+ * Styles the featured images
+ * shown in page/post archives.
+ */
+.attachment-thumbnail {
+	height: 150px!important;
+	margin-right:5px;
+}
+
+/**
+ * headlines with line.
+ */
+h1.line:before,
+h1.line:after,
+h2.line:before,
+h2.line:after,
+h3.line:before,
+h3.line:after,
+h4.line:before,
+h4.line:after,
+{
+	background-color: #454545;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+
+h1.line:before,
+h2.line:before,
+h3.line:before,
+h4.line:before,
+h1.entry-title:before,
+h2.entry-title:before
+{
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+h1.line:after,
+h2.line:after,
+h3.line:after,
+h4.line:after,
+h1.entry-title:after,
+h2.entry-title:after
+{
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+h1.line,
+h2.line,
+h3.line,
+h4.line,
+h1.entry-title,
+h2.entry-title
+{
+	overflow: hidden;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1.25em;
+	width:100%;
+}
+
+/**
+ * Author styling
+ */
+img.avatar {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	float: left;
+	margin-right: 5px;
+	max-height:100px;
+}
+
+/**
+ * Quick Video Fix
+ */
+figure.wp-block-embed-youtube > .wp-block-embed__wrapper {
+	position: relative;
+	width: 100%!important;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+figure.wp-block-embed-youtube > .wp-block-embed__wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%!important;
+	height: 100%!important;
+}
+
+/**
+ * Makes lists less indented.
+ */
+.entry-content ul {
+	padding-left: 20px;
+}
+
+/**
+ * Makes Toggle Button
+ * Full Width.
+ */
+.navbar-toggler {
+	width: 100%;
+}
+
+/**
+ * MAKES WORK BREAK THE DEFAULT
+ * IN ORDER TO PREVENT SPILLING
+ * OVER!
+ */
+p {
+	word-break:break-word;
+}
+
+/**
+ * Quick and dirty centering 
+ * of featured image.
+ */
+article> img.wp-post-image {
+	min-width: 100%;
+}
+
+/**
+ * Forces sub-sub menu's
+ * to display when sub menu
+ * is displayed!
+ */
+ul.dropdown-menu li > ul.dropdown-menu{
+	display: inline-grid;
+	width:100%!important;
+}
+ul.dropdown-menu li>ul {
+	position: static!important;
+}
+
+/**
+ * Menu.
+ */
+.dropdown-menu {
+	padding-bottom:0!important;
+	padding-top:0!important;
+}
+
+/**
+ * Ensures size of button 
+ * in google search embed.
+ */
+button.gsc-search-button {
+	width:70px!important;
+	background-color:#242525!important;
+}
+
+/**
+ * Google search results styling
+ */
+div.gsc-results-wrapper-overlay {
+	background-color:#242525!important;
+}
+.gsc-result-info {
+	color:#CCCCCC!important;
+}
+.gsc-orderby-label {
+	color:#CCCCCC!important;
+}
+.gsc-option-menu-container div {
+	background-color:#242525!important;
+	color:#CCCCCC!important;
+}
+.gsc-option-menu-container {
+	background-color:#242525!important;
+	color:#CCCCCC!important;
+}
+.gsc-cursor div {
+	background-color:#242525!important;
+	color:#CCCCCC!important;
+}
+.gsc-control-cse {
+	background-color:#242525!important;
+}
+.gsc-input {
+	color:#CCCCCC!important;
+	background-color:#242525!important;
+
+	padding-left: 0.5rem!important;
+	padding-right: 12px!important;
+	padding-top: 0.5rem!important;
+	padding-bottom: 0.5rem!important;
+}
+.gs-snippet {
+	color:#CCCCCC!important;
+	background-color:#242525!important;
+}
+.gsc-tabHeader {
+	background-color:#242525!important;
+}
+
+/**
+ * Changes styling of the 
+ * google search embed.
+ */
+#gs_st50 > a {
+	display:unset!important;
+}
+#gs_st50 > a > * {
+	color:#ccc!important;
+}
+#___gcse_0 > div > div > form > table > tbody {
+	border-style:hidden!important;
+}
+#___gcse_0 > div > div > form > table > tbody > tr > td.gsc-input {
+	border-style:hidden!important;
+}
+button.gsc-search-button {
+	height:51px;
+}
+.gsc-input-box {
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
+	border:none!important;
+}
+
+/**
+ * Header Background
+ * Colour.
+ */
+ #wrapper-navbar > nav.bg-primary {
+	background-color: white!important;
+}
+
+/**
+ * Forces pagination
+ * to be centered.
+ */
+.pagination {
+	justify-content: center;
+}
+
+/**
+ * Pagination style
+ * custamisation.
+ */
+.page-link{
+	background-color: white;
+	border-color: lightgray;
+	font-weight:bold;
+}
+.page-link:hover{
+	background-color:lightgray;
+	border-color:lightgray;
+	color:black!important;
+}
+.page-item.active .current{
+	background-color:lightgray;
+	border-color:lightgray;
+	color:black!important;
+}
+.page-item .dots{
+	background-color: white;
+	border-color: lightgray;
+}
+.page-item .dots:hover{
+	background-color:lightgray;
+	border-color:lightgray;
+	color:black!important;
+}
+
+/**
+ * Removes space before
+ * galleries caused by
+ * adding padding
+ * to lists earlier.
+ */
+.blocks-gallery-grid {
+	padding-left: 0px!important;
+}
+
+/**
+ * Verse quick fix?
+ */
+pre {
+	padding: 10px;
+	background: #f5f5f5;
+	font: 12px / 18px Consolas, monospace, serif;
+	color: #444;
+	-moz-tab-size: 4;
+	tab-size: 4;
+	overflow: auto;
+}
+
+/**
+ * Itallic/caption styling.
+ */
+em {
+	font-style: italic;
+}
+
+/**
+ * Quote Styling.
+ */
+blockquote {
+	padding-left: 15px;
+	border-left: 5px solid #EDEDED;
+	font-size: 16px;
+	line-height: 22px;
+	font-style: italic;
+}
+
+/**
+ * Styles the last word
+ * in the title.
+ */
+.title2 {
+	color:#a6191a;
+}
+
+/**
+ * Devices with screens
+ * below 768px
+ */
+@media only screen and (max-width: 768px) {
+	
+	/**
+	 * Remove lines
+	 */
+	h1.line:before,
+	h1.line:after,
+	h2.line:before,
+	h2.line:after,
+	h3.line:before,
+	h3.line:after,
+	h4.line:before,
+	h4.line:after,
+	h1.entry-title:before,
+	h1.entry-title:after,
+	h2.entry-title:before,
+	h2.entry-title:after
+	{
+		content: none;
+	}
+	
+}
+
+/**
+ * Styles Polly Toggle.
+ */
+.polly
+{
+	text-align:center;
+}
+
+/**
+ * Styles Audio Player.
+ */
+audio {
+	filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(82%)!important;
+	width: 50%!important;
+	height: 25px;
+	margin-left:25%;
+	margin-right:25%;
+}
+
+body.page-template-featurepage h1.entry-title:after {
+	content: none;
+}
+
+body.page-template-featurepage h1.entry-title:before {
+	content: none;
+}
+
+/**
+ * Limit Max Width.
+ */
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px
+) !default;
+// scss-docs-end container-max-widths
+
+//   TEXT STUFF FROM BOOTSTRAP 5!
+
+// Prefix for :root CSS variables
+
+$variable-prefix:             bs- !default;
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+
+/**
+ * Font style "Open Sans"
+ * applied.
+ */
+$font-family-sans-serif:      "Raleway", sans-serif !default;
+
+
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
+$font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
+$font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
+
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          600 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+// scss-docs-end font-variables
+
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        'Fira Sans', sans-serif !default;
+$headings-font-style:         null !default;
+$headings-font-weight:        500 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              null !default;
+// scss-docs-end headings-variables
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              #0000ee !important;
+$link-decoration:                         none !important;
+$link-shade-percentage:                   20% !default;
+$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration:                   none !default;
+
+.row.nav-links.justify-content-between>* {
+	width: unset!important;
+}
+
+.row>.thing {
+	width:unset!important;
+}
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-variables
+$border-width:                1px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+) !default;
+
+$border-color:                $gray-300 !default;
+// scss-docs-end border-variables
+
+// scss-docs-start border-radius-variables
+$border-radius:               .25rem !default;
+$border-radius-sm:            .2rem !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-pill:          50rem !default;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+// scss-docs-end box-shadow-variables
+
+// Pagination
+
+// scss-docs-start pagination-variables
+
+$pagination-padding-y:              .375rem !default;
+$pagination-padding-x:              .75rem !default;
+$pagination-padding-y-sm:           .25rem !default;
+$pagination-padding-x-sm:           .5rem !default;
+$pagination-padding-y-lg:           .75rem !default;
+$pagination-padding-x-lg:           1.5rem !default;
+
+$pagination-color:                  $link-color !default;
+$pagination-bg:                     $white !default;
+$pagination-border-width:           $border-width !default;
+$pagination-border-radius:          $border-radius !default;
+$pagination-margin-start:           -$pagination-border-width !default;
+$pagination-border-color:           $gray-300 !default;
+
+$pagination-focus-color:            $link-hover-color !default;
+$pagination-focus-bg:               $gray-200 !default;
+
+$pagination-focus-box-shadow:       none;
+
+$pagination-focus-outline:          0 !default;
+
+$pagination-hover-color:            $link-hover-color !default;
+$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-border-color:     $gray-300 !default;
+
+$pagination-active-color:           #000;
+$pagination-active-bg:              #d3d3d3;
+$pagination-active-border-color:    #d3d3d3;
+
+/**
+ * Forces sub-sub menu's
+ * to display when sub menu
+ * is displayed!
+ */
+ul.dropdown-menu li > ul.dropdown-menu{
+	display: inline-grid;
+}
+ul.dropdown-menu li>ul {
+	position: static!important;
+}
+
+.navigation {
+	padding-right: unset!important;
+	padding-left: unset!important;
+}
+
+.alignwide {
+	margin: unset!important;
+	width:unset!important;
+	max-width:unset!important;
+}
+
+/**
+ * Box Shadow, Border and Checkbox Colours.
+ */
+.form-control:focus {
+	box-shadow:0 0 3px 5px lightgray!important;
+	border-color: lightgray!important;
+}
+.form-submit>*:focus {
+	box-shadow:0 0 3px 5px lightgray!important;
+}
+.form-check-input:focus {
+	background-color: lightgray!important;
+	box-shadow:0 0 3px 5px lightgray!important;
+	border-color: lightgray!important;
+}
+.form-check-input {
+	background-color: white!important;
+	border-color: lightgray!important;
+}
+.form-check-input:checked {
+	background-color: lightgray!important;
+	border-color: lightgray!important;
+}
+
+/**
+ * Menu styling.
+ */
+#main-menu a {
+	font-size: 1em!important;
+}
+#main-menu a:hover {
+	color: #0571FF!important;
+	background-color: unset!important;
+}
+#main-menu a:focus {
+	color: #0571FF!important;
+	background-color: unset!important;
+}
+.navbar-dark .navbar-nav .active {
+	background-color: unset!important;
+}
+.dropdown-menu {
+	border:none!important;
+}
+
+/* ============== GOOGLE FONT IMPLEMENTATION ===================== */
+
+@font-face {
+	font-family: "Fira Sans";
+	font-style:normal;
+	font-weight:400;
+	font-display:swap;
+	src: url(../fonts/FiraSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Fira Sans";
+	font-style:normal;
+	font-weight:500;
+	font-display:swap;
+	src: url(../fonts/FiraSans-Medium.ttf);
+}
+
+@font-face {
+	font-family: "Fira Sans";
+	font-style:normal;
+	font-weight:600;
+	font-display:swap;
+	src: url(../fonts/FiraSans-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: "Fira Sans";
+	font-style:normal;
+	font-weight:700;
+	font-display:swap;
+	src: url(../fonts/FiraSans-Bold.ttf);
+}
+
+
+@font-face {
+	font-family: "Fira Sans";
+	font-style:normal;
+	font-weight:800;
+	font-display:swap;
+	src: url(../fonts/FiraSans-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-style:normal;
+	font-weight:400;
+	font-display:swap;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-style:normal;
+	font-weight:500;
+	font-display:swap;
+	src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-style:normal;
+	font-weight:600;
+	font-display:swap;
+	src: url(../fonts/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: "Raleway";
+	font-style:normal;
+	font-weight:700;
+	font-display:swap;
+	src: url(../fonts/Raleway-Bold.ttf);
+}
+
+/* Custom Fonts ===================== */
+@font-face {
+	font-family: Market;
+	src: url(../fonts/Market-Regular.ttf);
+	font-weight: 400;
+	font-display: swap;
+}
+
+/* =============================================================== */
+
+
+/**
+ *	DEFAULT h2 STYLE!
+ */
+h2 {
+	font-weight: 800!important;
+}
+
+/**
+ *	FOOTER STYLING
+ */
+#wrapper-footer-full {
+	background-color: #231F20!important;
+	color: #fff;
+}
+
+#wrapper-footer-full h2 {
+	color: #A8C1D9!important;
+	font-size: 2.25em!important;
+	font-weight: 500!important;
+}
+
+#wrapper-footer-full ul {
+	list-style: none!important;
+	padding-left: unset!important;
+}
+
+#wrapper-footer-full a {
+	font-size: 1em;
+	font-weight:600;
+}
+
+/**
+ * Link colours.
+ */
+a:-webkit-any-link {
+	color:#0571FF;
+}
+
+a:-webkit-any-link:hover {
+	color:darkgray;
+}
+
+/**
+ * Changed Related Posts hover
+ * behaviour to be in-line with
+ * all other links styling.
+ */
+.jp-relatedposts-post:hover a:-webkit-any-link {
+	color: darkgray;
+	text-decoration: none!important;
+}
+
+/**
+ * Footer Link colours.
+ */
+#wrapper-footer-full a:-webkit-any-link {
+	color:white;
+}
+
+#wrapper-footer-full a:-webkit-any-link:hover {
+	color: #0571FF;
+}
+
+/**
+ *	FOOTER 2 STYLING
+ *	(Footer Site Info)
+ */
+#wrapper-footer {
+	color:#808080;
+}
+#wrapper-footer a:-webkit-any-link {
+	color:#808080;
+}
+#wrapper-footer a:-webkit-any-link:hover {
+	color: #0571FF;
+}
+.site-info {
+	text-align: center;
+}
+.site-info>p {
+	margin-bottom: 1rem!important;
+}
+
+/**
+ *	WIDTH AT WHICH LOGO GOES FULL WIDTH!
+ */
+@media (max-width: 991px){
+	#wrapper-navbar>nav>div.container {
+	    display: block;
+	}
+}
+
+.img-fluid {
+	min-width: 100px;
+}
+
+#wrapper-navbar>nav>div.container {
+	text-align:center;
+}
+
+/**
+ *	Standard Header Colours.
+ */
+h1 {
+	color: #2458A5;
+}
+h2 {
+	color: #3768B0;
+}
+h3 {
+	color: #3E64AD;
+}
+h4 {
+	color: #466FB5;
+}
+h5 {
+	color: #8093A5;
+}
+
+/**
+ *	Standard Header Margins.
+ */
+h1, h2, h3, h4, h5 {
+	margin-top: 0.5rem!important;
+}
+
+h1 {
+	font-weight: 800!important;
+}
+/**
+ * btn styling.
+ */
+.btn {
+	padding: 17px 30px!important;
+	border-radius: 30px!important;
+	font-weight: 700!important;
+	font-size: 13.6px!important;
+}
+.btn-green {
+	background-color: #4cc49e!important;
+	color: #ffffff!important;
+}
+
+/**
+ * Styling of the ".fancy" columns.
+ */
+.fancy {
+	color:white!important;
+}
+.fancy h2 {
+	color:white;
+}
+.fancy .darkblue {
+	background-color: #333459!important;
+}
+.fancy .lightblue {
+	background-color: #4fccd4!important;
+}
+.fancy .lightgreen {
+	background-color: #4cc49e!important;
+}
+.fancy .wp-block-button a {
+	background-color: rgba(255, 255, 255, 0.2)!important;
+}
+.fancy .wp-block-button a:hover {
+	border: 1px solid rgba(255, 255, 255, 0.6)!important;
+	background-color:transparent!important;
+}
+.fancy .darkgreen {
+	background-color: #198754!important;
+}
+
+/**
+ * Styling of peters ".is-style-outline" buttons
+ * in the ".fancy" columns.
+ */
+.fancy .wp-block-button.is-style-outline a:hover {
+    border: 2px solid rgba(255,255,255,.6)!important;
+    background-color: transparent!important;
+}
+
+/**
+ * Makes all large "squared" images
+ * in the ".fancy" columns the same size.
+ */
+.fancy .is-style-square-large img {
+	width:100%!important;
+	height:280px!important;
+}
+
+/**
+ * Default style of button block
+ */
+.wp-block-buttons>.wp-block-button a {
+	padding: 17px 30px!important;
+	border-radius: 0px;
+	font-weight: 700;
+	font-size: 13.6px;
+	width:100%;
+}
+.wp-block-buttons>.wp-block-button a:not(.has-text-color) {
+	color: #ffffff!important;
+}
+
+
+
+/**
+ * Default colour of button block
+ */
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background),.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background) {
+	background-color: #0B4C8C!important;
+}
+
+/**
+ * Adds padding to center aligned paragraphs.
+ */
+p.has-text-align-center {
+	padding:0em 2em 0em 2em!important;
+}
+h2.has-text-align-center {
+	padding:0em 1em 0em 1em!important;
+}
+h3.has-text-align-center {
+	padding:0em 1em 0em 1em!important;
+}
+h4.has-text-align-center {
+	padding:0em 1em 0em 1em!important;
+}
+
+/**
+ * Column Styling!
+ */
+.wp-block-column {
+	display: flex!important;
+	flex-direction: column!important;
+}
+
+.wp-block-column .wp-block-buttons {
+	margin-top: auto!important;
+	padding-bottom:2em;
+}
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white !default;
+$body-color:                #808080 !default;
+$body-text-align:           null !default;
+
+/**
+ * Font option.
+ */
+.squiggle {
+	font-family: Market!important;
+	color: #4fccd4;
+	font-weight: 400!important;
+}
+
+/**
+ * headers in media text block.
+ */
+.wp-block-media-text h2 {
+	padding-top:1em;
+}
+.wp-block-media-text h3 {
+	padding-top:1em;
+}
+.wp-block-media-text h4 {
+	padding-top:1em;
+}
+
+
+/**
+ * Button stuff.
+ */
+.wp-block-buttons {
+	padding-bottom: 2em;
+	width:100%;
+}
+
+.wp-block-buttons>.wp-block-button {
+	width:100%;
+}
+
+
+/**
+ * Makes seperators used for
+ * adding space before text
+ * invisible.
+ */
+.spacey.wp-block-separator {
+	opacity: 0;
+}
+
+.allwhite a {
+	color:white;
+}
+
+.allwhite .wp-block-button a {
+	color:#4fccd4!important;
+	background-color: white!important;
+}
+
+.whiteback {
+	background:white;
+}
+
+.wp-block-columns {
+	margin-bottom: 0em;
+}
+
+
+/**
+ * Styling for forcing
+ * columns and other blocks
+ * to be in the center
+ * using margins.
+ */
+.forcemiddle {
+	margin: 0em 20% 0em 20%;
+}
+@media (max-width: 991px) {
+	.forcemiddle {
+		margin: 0em 0% 0em 0%;
+	}
+}
+
+/**
+ * Styling for forcing
+ * lists to align
+ * in the center.
+ */
+ul.middle {
+	list-style-position: inside;
+	text-align:center;
+}
+
+/**
+ * Hides h1 on home without
+ * annoying google by removing
+ * h1 all together.
+ */
+.home h1 {
+	display:none;
+}
+
+/**
+ * Changes background colour of comments.
+ */
+#jetpack_remote_comment {
+	background-color: rgb(36, 37, 37);
+}
+
+/**
+ * Cover Block Styling.
+ */
+.wp-block-cover {
+	min-height:450px;
+}
+
+@media (max-width: 1200px)
+{
+	.wp-block-cover {
+		min-height:230px;
+	}
+}
+
+/**
+ * Makes contact form full width.
+ */
+div.wpforms-container-full {
+	width: 100%;
+}
+/**
+ * prevents outline appearing on click.
+ */
+#content {
+	outline:none;
+}
+
+/**
+ * Maked iframes full width!
+ */
+.wp-block-embed iframe {
+	max-width: 100%;
+	width: 100%;
+}
+
+/**
+ * Makes buttonbox display
+ * horizontally when not
+ * on mobile.
+ */
+@media (min-width: 992px) {
+	#buttonbox {
+		display:flex;
+	}
+}
+/**
+ * Removes box shadow from toggle.
+ */
+.navbar-toggler:focus {
+	box-shadow: 0 0 0 0!important;
+}
+
+// Button focus box shadow stuff start
+$component-active-color:      $white !default;
+$component-active-bg:         $primary !default;
+
+$input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
+
+
+$input-btn-focus-width:         0rem !default; //NO FOCUS SHADOW ON BUTTONS
+$input-btn-focus-color-opacity: .25 !default;
+$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+$input-btn-focus-blur:          0 !default;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
+
+$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+
+$accordion-button-focus-border-color:     $input-focus-border-color !default;
+$accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
+// Button focus box shadow stuff end
+
+// puts small space between toggler and button
+.navbar-toggler {
+    margin-bottom: 1px;
+}
+
+/**
+ * Unsets border color defaulting to white
+ * due to "\src\sass\assets\understrap\theme\_colors.scss"
+ */
+.wp-block-pullquote {
+	border-color: unset!important;
+}
+/**
+ * Centers blockquotes within pullquotes
+ * by removing the left border and
+ * balancing out the left padding
+ * with some right padding.
+ */
+.wp-block-pullquote blockquote {
+	border-left:unset!important;
+	padding-right:15px;
+}
+
+/**
+ * Column Fix for front page.
+ */
+.wp-block-column > .size-full > a > img {
+	width: 100%;
+}
+
+/**
+ * Container Centering Fix For WordPress 6.1.
+ */
+.is-content-justification-center {
+	align-self:center;
+}
+
+/**
+ * Repositions contents
+ * to fit within the image
+ * on various screen sizes.
+ */
+.home .wp-block-cover >div {
+	position:absolute;
+	bottom: 14%;
+}
+
+@media only screen and (max-width: 1201px) {
+	.home .wp-block-cover >div {
+		bottom: 5%
+	}
+}
+
+/* Brand icon*/
+.brand::before {
+	font-family: "Font Awesome 5 Brands"!important;
+	font-size: 1.1em!important;
+	font-weight: 100!important;
+	line-height: normal!important;
+}
+.brand {
+	font-size:1em;
+	line-height: normal;
+}
+.youtube-icon::before {
+	content: '\f167';
+}
+.wordpress-icon::before {
+	content: '\f19a';
+}
+.twitter-icon::before {
+	content: '\f099';
+}
+.twitch-icon::before {
+	content: '\f1e8';
+}
+.tiktok-icon::before {
+	content: '\e07b';
+}
+.paypal-icon::before {
+	content: '\f1ed';
+}
+.linkedin-icon::before {
+	content: '\f08c';
+	font-size: 1.2em!important;
+}
+.facebook-icon::before {
+	content: '\f09a';
+}
+.instagram-icon::before {
+	content: '\f16d';
+}
+
+/* Free icon*/
+.free::before {
+	font-family: "Font Awesome 5 Free"!important;
+	font-size: 1.1em!important;
+	line-height: normal!important;
+}
+.free {
+	font-size:1em;
+	line-height: normal;
+}
+.wheelchair-icon::before {
+	content: '\f193';
+	font-weight: 600;
+}
+.signlanguage-icon::before {
+	content: '\f2a7';
+	font-weight: 600;
+}
+.closedcaption-icon::before {
+	content: '\f20a';
+}
+.lowvision-icon::before {
+	content: '\f2a8';
+	font-weight: 600;
+}
+.tag-icon::before {
+	content: '\f02b';
+	font-weight: 600;
+}
+.tags-icon::before {
+	content: '\f02c';
+	font-weight: 600;
+}
+.sync-icon::before {
+	content: '\f2f1';
+	font-weight: 600;
+}
+.share-icon::before {
+	content: '\f064';
+	font-weight: 600;
+}
+.link-icon::before {
+	content: '\f0c1';
+	font-weight: 600;
+}
+.reply-icon::before {
+	content: '\f3e5';
+	font-weight: 600;
+}
+.replyall-icon::before {
+	content: '\f122';
+	font-weight: 600;
+}
+.sitemap-icon::before {
+	content: '\f0e8';
+	font-weight: 600;
+}
+.toggleon-icon::before {
+	content: '\f205';
+	font-weight: 600;
+}
+.toggleoff-icon::before {
+	content: '\f204';
+	font-weight: 600;
+}
+.fileupload-icon::before {
+	content: '\f574';
+	font-weight: 600;
+}
+.cloud-icon::before {
+	content: '\f381';
+	font-weight: 600;
+}
+.bookmark-icon::before {
+	content: '\f02e';
+}
+.users-icon::before {
+	content: '\f0c0';
+	font-weight: 600;
+}
+.userplus-icon::before {
+	content: '\f234';
+	font-weight: 600;
+}
+.userminus-icon::before {
+	content: '\f503';
+}
+.thumbsup-icon::before {
+	content: '\f164';
+}
+.thumbsdown-icon::before {
+	content: '\f165';
+}
+.mapmarker-icon::before {
+	content: '\f3c5';
+	font-weight: 600;
+}
+.comments-icon::before {
+	content: '\f086';
+}
+.camera-icon::before {
+	content: '\f030';
+	font-weight: 600;
+}
+.bell-icon::before {
+	content: '\f0f3';
+}
+.envelope-icon::before {
+	content: '\f0e0';
+}
+.trademark-icon::before {
+	content: '\f25c';
+	font-weight: 600;
+}
+.copyright-icon::before {
+	content: '\f1f9';
+}
+.podcast-icon::before {
+	content: '\f2ce';
+	font-weight: 600;
+}
+.biking-icon::before {
+	content: '\f84a';
+	font-weight: 600;
+}
+.motorcycle-icon::before {
+	content: '\f21c';
+	font-weight: 600;
+}
+.hands-icon::before {
+	content: '\f4c4';
+	font-weight: 600;
+}
+.search-icon::before {
+	content: '\f002';
+	font-weight: 600;
+}
+.hand-holding-heart-icon::before {
+	content: '\f4be';
+	font-weight: 600;
+}
+.heart-icon::before {
+	content: '\f004';
+	font-weight: 600;
+}
+.school-icon::before {
+	content: '\f549';
+	font-weight: 600;
+}
+.clipboard-icon::before {
+	content: '\f46d';
+	font-weight: 600;
+}
+.pound-icon::before {
+	content: '\f154';
+	font-weight: 600;
+}
+.search-dollar-icon::before {
+	content: '\f688';
+	font-weight: 600;
+}
+.funnel-dollar-icon::before {
+	content: '\f662';
+	font-weight: 600;
+}
+.building-icon::before {
+	content: '\f1ad';
+	font-weight: 600;
+}
+.city-icon::before {
+	content: '\f64f';
+	font-weight: 600;
+}
+.people-carry-icon::before {
+	content: '\f4ce';
+	font-weight: 600;
+}
+.walking-icon::before {
+	content: '\f554';
+	font-weight: 600;
+}
+.spell-check-icon::before {
+	content: '\f891';
+	font-weight: 600;
+}
+.wrench-icon::before {
+	content: '\f0ad';
+	font-weight: 600;
+}
+.window-maximise-icon::before {
+	content: '\f2d0';
+	font-weight: 600;
+}
+.window-minimise-icon::before {
+	content: '\f2d1';
+	font-weight: 600;
+}
+.window-close-icon::before {
+	content: '\f410';
+	font-weight: 600;
+}
+.window-restore-icon::before {
+	content: '\f2d2';
+	font-weight: 600;
+}
+.wifi-icon::before {
+	content: '\f1eb';
+	font-weight: 600;
+}
+.undo-icon::before {
+	content: '\f0e2';
+	font-weight: 600;
+}
+.redo-icon::before {
+	content: '\f01e';
+	font-weight: 600;
+}
+.table-icon::before {
+	content: '\f0ce';
+	font-weight: 600;
+}
+.tasks-icon::before {
+	content: '\f0ae';
+	font-weight: 600;
+}
+.sort-numeric-up-icon::before {
+	content: '\f163';
+	font-weight: 600;
+}
+.sort-numeric-down-icon::before {
+	content: '\f162';
+	font-weight: 600;
+}
+.sort-icon::before {
+	content: '\f0dc';
+	font-weight: 600;
+}
+.sign-in-icon::before {
+	content: '\f2f6';
+	font-weight: 600;
+}
+.sign-out-icon::before {
+	content: '\f2f5';
+	font-weight: 600;
+}
+.question-circle-icon::before {
+	content: '\f059';
+	font-weight: 600;
+}
+.qr-code-icon::before {
+	content: '\f029';
+	font-weight: 600;
+}
+.parking-sign-icon::before {
+	content: '\f540';
+	font-weight: 600;
+}
+.paperclip-icon::before {
+	content: '\f0c6';
+	font-weight: 600;
+}
+.lock-icon::before {
+	content: '\f023';
+	font-weight: 600;
+}
+.lock-open-icon::before {
+	content: '\f3c1';
+	font-weight: 600;
+}
+.list-icon::before {
+	content: '\f0ca';
+	font-weight: 600;
+}
+.less-than-icon::before {
+	content: '\f536';
+	font-weight: 600;
+}
+.user-friends-icon::before {
+	content: '\f500';
+	font-weight: 600;
+}
+.user-edit-icon::before {
+	content: '\f4ff';
+	font-weight: 600;
+}
+.user-icon::before {
+	content: '\f007';
+	font-weight: 600;
+}
+.user-circle-icon::before {
+	content: '\f2bd';
+	font-weight: 600;
+}
+.volume-up-icon::before {
+	content: '\f028';
+	font-weight: 600;
+}
+.volume-down-icon::before {
+	content: '\f027';
+	font-weight: 600;
+}
+.volume-mute-icon::before {
+	content: '\f6a9';
+	font-weight: 600;
+}
+.volume-off-icon::before {
+	content: '\f026';
+	font-weight: 600;
+}
+.video-icon::before {
+	content: '\f03d';
+	font-weight: 600;
+}
+.video-slash-icon::before {
+	content: '\f4e2';
+	font-weight: 600;
+}
+.rss-icon::before {
+	content: '\f09e';
+	font-weight: 600;
+}
+.route-icon::before {
+	content: '\f4d7';
+	font-weight: 600;
+}
+.shopping-cart-icon::before {
+	content: '\f07a';
+	font-weight: 600;
+}
+.burn-icon::before {
+	content: '\f46a';
+	font-weight: 600;
+}
+.wallet-icon::before {
+	content: '\f555';
+	font-weight: 600;
+}
+.balance-scale-icon::before {
+	content: '\f24e';
+	font-weight: 600;
+}
+.ad-icon::before {
+	content: '\f641';
+	font-weight: 600;
+}
+.calendar-check-icon::before {
+	content: '\f274';
+	font-weight: 600;
+}
+.book-icon::before {
+	content: '\f02d';
+	font-weight: 600;
+}
+.book-reader-icon::before {
+	content: '\f5da';
+	font-weight: 600;
+}
+.shopping-basket-icon::before {
+	content: '\f291';
+	font-weight: 600;
+}
+.chart-bar-icon::before {
+	content: '\f080';
+	font-weight: 600;
+}
+.tree-icon::before {
+	content: '\f1bb';
+	font-weight: 600;
+}
+.seedling-icon::before {
+	content: '\f4d8';
+	font-weight: 600;
+}
+.leaf-icon::before {
+	content: '\f06c';
+	font-weight: 600;
+}
+.mountain-icon::before {
+	content: '\f6fc';
+	font-weight: 600;
+}
+.cube-icon::before {
+	content: '\f1b2';
+	font-weight: 600;
+}
+.cubes-icon::before {
+	content: '\f1b3';
+	font-weight: 600;
+}
+.crown-icon::before {
+	content: '\f521';
+	font-weight: 600;
+}
+
+/**
+ * Menu Experiments.
+ */
+#wrapper-navbar>nav>div.container {
+	justify-content: center;
+}
+@media (min-width: 992px) {
+	.navbar-nav {
+		flex-flow: row!important;
+	}
+}
+.navbar-nav li {
+	flex-flow: row;
+	padding: 0.25rem 1rem;
+}
+.dropdown-menu {
+	background-color:unset!important;
+	color:white!important;
+}
+#main-menu a {
+	background-color:unset!important;
+	color:white!important;
+}
+.navbar button {
+	color: #000;
+	background: none;
+	border: none;
+	font-size: 1em!important;
+	font-family: "Raleway";
+	font-weight: 600;
+
+	padding: 0.5rem!important;
+	margin-right:0.5rem;
+	margin-left:0.5rem;
+}
+
+/**
+ * Forces sub menu's
+ * to display when menu
+ * is displayed!
+ */
+@media (min-width: 992px) {
+	ul.dropdown-menu {
+		display: inline-grid;
+	}
+}
+
+/**
+ * Targets specific menu item
+ * and makes it a column
+ * (for social icons).
+ * 
+ * (Currently aims at id
+ * can be improved)
+ */
+/*mobile version*/
+ #menu-item-10920 > ul.show {
+	grid-auto-flow: column;
+	display: inline-grid;
+	padding: 0.25rem 1rem;
+}
+/*pc version*/
+@media (min-width: 992px) {
+	 #menu-item-10920 > ul {
+		grid-auto-flow: column;
+		display: inline-grid;
+		padding: 0.25rem 1rem;
+	}
+}
+/*remove padding*/
+ #menu-item-10920 > ul > li {
+	padding:unset!important;
+}
+ #menu-item-10920 > ul > li > a {
+	padding:unset!important;
+}
+
+/**
+ * Removes menu arrows.
+ */
+.dropdown-toggle:after {
+	display:none!important;
+}
+
+/**
+ * Forcing Left Align
+ * in Menus.
+ */
+.menu-item {
+	text-align: left!important;
+}
+.menu-item ul {
+	padding-left:0px!important;
+	padding-right:0px!important;
+}
+.menu-item li {
+	padding-left:0px;
+	padding-right:0px;
+}
+.menu-item a {
+	padding-left:0px!important;
+	padding-right:0px!important;
+}
+
+/**
+ * Left Border Lines
+ * in Menus.
+ */
+.dropdown-menu {
+	border-left-color: #fff!important;
+	border-left-style: solid!important;
+	border-left-width: thin!important;
+	border-radius:0px!important;
+}
+
+/**
+ * Padding stuff
+ * (probably overwriting
+ * redundant stlying, so
+ * go back and check later).
+ */
+.dropdown-menu> *{
+	padding-left:10px!important;
+}
+ #menu-item-10920 > ul {
+	padding-left:10px!important;
+}
+.dropdown-menu> *{
+	padding-top:0px!important;
+}
+.dropdown-menu> *>*{
+	padding-top:0px!important;
+}
+.navbar-nav > *{
+	padding-bottom:1rem!important;
+}
+.dropdown-menu >:nth-last-child(1) {
+	padding-bottom: 0px!important;
+}
+.dropdown-menu >:nth-last-child(1) >* {
+	padding-bottom: 0px!important;
+}
+
+.dropdown-toggle.nav-link {
+	font-weight: bold!important;
+}
+
+/**
+ * Makes menu word
+ * wrap differently.
+ * 
+ * (Disabled)
+ */
+.dropdown-item {
+	white-space: pre-wrap!important;
+}
+.navbar-nav .menu-item {
+    //width: 100%;
+}
+.navbar-nav > .menu-item {
+	//min-width:310px!important;
+}
+@media (min-width: 1200px) {
+	.navbar-nav > .menu-item {
+		//min-width:372px!important;
+	}
+}
+
+/**
+ * Disable Clicking on Menu
+ * Top Item (Except on mobile).
+ */
+@media (min-width: 992px) {
+	.navbar-nav >.menu-item > a {
+		pointer-events: none!important;
+	}
+}
+
+/**
+ * Footer stuff.
+ */
+.site-info p {
+	margin-bottom:0px;
+}
+
+.footer-extra p {
+	margin-bottom:0px;
+}
+.footer-extra {
+	margin-top:1rem;
+}
+
+/**
+ * Left Border Lines
+ * in Menus.
+ */
+#footer-full-content>.row>:nth-last-child(1)>.wp-block-group {
+	border-left-color: #fff!important;
+	border-left-style: solid!important;
+	border-left-width: medium!important;
+	border-radius:0px!important;
+	padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+	#footer-full-content>.row>:first-child {
+		flex: 0 0 auto;
+		width: 70%!important;
+	}
+	
+	#footer-full-content>.row>:nth-last-child(1) {
+		flex: 0 0 auto;
+		width: 30%!important;
+	}
+}
+
+@media (min-width: 768px) {
+	#footer-full-content>.row>:first-child>.wp-block-group {
+		text-align: left;
+		width: 450px;
+	}
+	
+	#footer-full-content>.row>:first-child .wp-block-image>img {
+		width: inherit;
+	}
+}
+
+#footer-full-content>.row>:first-child>.wp-block-group p {
+	border-left-color: #fff!important;
+	border-left-style: solid!important;
+	border-left-width: medium!important;
+	border-radius:0px!important;
+	padding-left: 1rem;
+	margin-top:1rem!important;
+}
+
+.socialiconz>:nth-last-child(1) {
+	padding-left:0px;
+}
+
+/**
+ * Auto sets the height of the
+ * accessability box.
+ */
+#ufw_1 .ufw_wb {
+	height: auto !important;
+}
+/**
+ * Prevents accessability box
+ * filling phone screen.
+ */
+@media screen and (max-width: 600px) {
+	.ufw_pp .ufw_wb {
+		top:unset!important;
+	}
+}
+
+/**
+ * Feature Page
+ * Styling.
+ */
+.feature-logo {
+    margin-left: 5%!important;
+    width: 20%;
+    height: 20%;
+}
+#innerdiv1 {
+    width: 100%;
+    top: 0;
+}
+#innerdiv2 .h1, #innerdiv2 h1 {
+    font-size: 2.5em;
+}
+#innerdiv2 {
+    bottom: 0;
+    margin-left: 5%!important;
+}
+body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h1.entry-title {
+    background-color: #000!important;
+    border-radius: 15px 15px 0 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: unset;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+}
+
+
+
+
+/**
+ * Styling special links
+ * that should not follow the
+ * standard colour scheme.
+ */
+.special a:-webkit-any-link {
+    color: unset;
+}
+.special a:-webkit-any-link:hover {
+    color: #0571ff;
+}
+
+/**
+ * Centers menu buttons
+ * on mobile.
+ */
+@media (max-width: 991px) {
+	#buttonz {
+			justify-content: center!important;
+	}
+}
+
+
+/**
+ * Media Text Block Default Padding Removed.
+ * Only if .padded class is not applied.
+ */
+.wp-block-media-text:not(.padded).has-media-on-the-right .wp-block-media-text__content {
+	padding-left: 0!important;
+}
+.wp-block-media-text:not(.padded):not(.has-media-on-the-right) .wp-block-media-text__content {
+	padding-right: 0!important;
+}
+
+@media screen and (max-width: 600px) {
+	.wp-block-media-text:not(.padded):is(.has-media-on-the-right):is(.is-stacked-on-mobile)>div.wp-block-media-text__content {
+		padding-right: 0!important;
+	}
+	.wp-block-media-text:not(.padded):not(.has-media-on-the-right):is(.is-stacked-on-mobile)>.wp-block-media-text__content {
+		padding-left: 0!important;
+	}
+}
+
+
+/**
+ * Reduces column gap to 25px.
+ */
+:where(.wp-block-columns.is-layout-flex) {
+    column-gap: 25px!important;
+}
+
+
+
+
+/**
+ * Forces the right column to
+ * stack on top of the left
+ * on mobile.
+ */
+@media (max-width: 781px) {
+	.wp-block-columns.reverse:not(.is-not-stacked-on-mobile)  {
+    flex-flow: column-reverse!important;
+	}
+}
+
+/**
+ * Adds padding to a column.
+ */
+.wp-block-column .padded {
+	padding: 8% 8%!important;
+}
+

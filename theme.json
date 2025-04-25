@@ -1,0 +1,38 @@
+{
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "name": "RCVDA Dark Blue",
+                    "slug": "rcvda-dark-blue",
+                    "color": "#0E1F40"
+                },
+                {
+                    "name": "RCVDA Blue",
+                    "slug": "rcvda-blue",
+                    "color": "#033E8C"
+                },
+                {
+                    "name": "RCVDA Light Blue",
+                    "slug": "rcvda-light-blue",
+                    "color": "#A7C1D9"
+                },
+                {
+                    "name": "RCVDA Orange",
+                    "slug": "rcvda-orange",
+                    "color": "#F29F05"
+                },
+                {
+                    "name": "RCVDA Red",
+                    "slug": "rcvda-red",
+                    "color": "#D91E0D"
+                }
+            ]
+        },
+"custom": {},
+        "layout": {
+          "wideSize": "1116px"
+        }
+    }
+}
