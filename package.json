@@ -55,20 +55,20 @@
     "bootstrap": "^5.3.5",
     "browser-sync": "^3.0.4",
     "browserslist": "^4.24.4",
-    "caniuse-lite": "^1.0.30001714",
+    "caniuse-lite": "^1.0.30001715",
     "clean-css-cli": "^5.6.3",
-    "nodemon": "^3.1.9",
+    "nodemon": "^3.1.10",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "postcss-understrap-palette-generator": "git+https://github.com/understrap/postcss-understrap-palette-generator.git",
     "rollup": "^4.40.0",
-    "sass": "^1.86.3",
+    "sass": "^1.87.0",
     "terser": "^5.39.0",
     "understrap": "github:understrap/understrap#develop"
   },
   "dependencies": {
-    "npm-check-updates": "^17.1.18",
+    "npm-check-updates": "^18.0.1",
     "repair": "^0.1.1"
   }
 }
