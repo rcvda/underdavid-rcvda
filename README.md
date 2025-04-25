@@ -96,7 +96,6 @@ To disable all headers simply add “future=false current=false past=false”.
 + Make changes to styling by changing and saving underdavid-rcvda\src\sass\theme\_child_theme_variables
 + Ctrl + c
 
-
 ## Credits
 + Understrap Child Starter Theme https://github.com/understrap/understrap-child
 + Table Of Contents Code https://webdeasy.de/en/wordpress-table-of-contents-without-plugin
