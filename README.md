@@ -4,9 +4,7 @@
 
 Based on the Understrap Child Theme (Version 1.2.0) provided: https://github.com/understrap/understrap-child
 
-Please note that this repository is not a priority and thus will not be well documented for some time.
 
-Quite a bit of information on this README is out of date.
 
 ## Basic Features
 + Multiple Navbar Menus.
@@ -23,6 +21,8 @@ Quite a bit of information on this README is out of date.
     + Circle (Large).
     + Circle (Max).
 + Added support for excerpts on pages.
++ 
++ 
 
 ### Shortcodes
 #### post_date
@@ -96,6 +96,8 @@ To disable all headers simply add “future=false current=false past=false”.
 + Make changes to styling by changing and saving underdavid-rcvda\src\sass\theme\_child_theme_variables
 + Ctrl + c
 
+
 ## Credits
 + Understrap Child Starter Theme https://github.com/understrap/understrap-child
 + Table Of Contents Code https://webdeasy.de/en/wordpress-table-of-contents-without-plugin
++ 
