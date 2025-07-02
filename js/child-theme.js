@@ -18,7 +18,11 @@
 	  var f = n.default;
 		if (typeof f == "function") {
 			var a = function a () {
-				if (this instanceof a) {
+				var isInstance = false;
+	      try {
+	        isInstance = this instanceof a;
+	      } catch {}
+				if (isInstance) {
 	        return Reflect.construct(f, arguments, this.constructor);
 				}
 				return f.apply(this, arguments);
@@ -45,7 +49,7 @@
 	var data$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap data.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap data.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -118,7 +122,7 @@
 	var util$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap index.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap index.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -406,7 +410,7 @@
 	}
 
 	/*!
-	  * Bootstrap event-handler.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap event-handler.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -652,7 +656,7 @@
 	var manipulator$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap manipulator.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap manipulator.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -730,7 +734,7 @@
 	}
 
 	/*!
-	  * Bootstrap config.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap config.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -803,7 +807,7 @@
 	}
 
 	/*!
-	  * Bootstrap base-component.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap base-component.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -829,7 +833,7 @@
 			  /**
 			   * Constants
 			   */
-			  const VERSION = '5.3.6';
+			  const VERSION = '5.3.7';
 
 			  /**
 			   * Class definition
@@ -898,7 +902,7 @@
 	var selectorEngine$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap selector-engine.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1008,7 +1012,7 @@
 	}
 
 	/*!
-	  * Bootstrap component-functions.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap component-functions.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1057,7 +1061,7 @@
 	}
 
 	/*!
-	  * Bootstrap alert.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap alert.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1157,7 +1161,7 @@
 	var button$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap button.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap button.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1248,7 +1252,7 @@
 	var swipe$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap swipe.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap swipe.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1388,7 +1392,7 @@
 	}
 
 	/*!
-	  * Bootstrap carousel.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap carousel.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1786,7 +1790,7 @@
 	var collapse$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap collapse.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap collapse.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -3710,7 +3714,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap dropdown.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4131,7 +4135,7 @@
 	var backdrop$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap backdrop.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap backdrop.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4277,7 +4281,7 @@
 	var focustrap$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap focustrap.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap focustrap.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4397,7 +4401,7 @@
 	var scrollbar$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollbar.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap scrollbar.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4515,7 +4519,7 @@
 	}
 
 	/*!
-	  * Bootstrap modal.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap modal.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4845,7 +4849,7 @@
 	var offcanvas$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap offcanvas.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5105,7 +5109,7 @@
 	var sanitizer$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap sanitizer.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap sanitizer.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5176,7 +5180,6 @@
 			   *
 			   * Shout-out to Angular https://github.com/angular/angular/blob/15.2.8/packages/core/src/sanitization/url_sanitizer.ts#L38
 			   */
-			  // eslint-disable-next-line unicorn/better-regex
 			  const SAFE_URL_PATTERN = /^(?!javascript:)(?:[a-z0-9+.-]+:|[^&:/?#]*(?:[/?#]|$))/i;
 			  const allowedAttribute = (attribute, allowedAttributeList) => {
 			    const attributeName = attribute.nodeName.toLowerCase();
@@ -5229,7 +5232,7 @@
 	var templateFactory$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap template-factory.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap template-factory.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5385,7 +5388,7 @@
 	}
 
 	/*!
-	  * Bootstrap tooltip.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap tooltip.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5789,6 +5792,7 @@
 			        if (trigger === 'click') {
 			          EventHandler.on(this._element, this.constructor.eventName(EVENT_CLICK), this._config.selector, event => {
 			            const context = this._initializeOnDelegatedTarget(event);
+			            context._activeTrigger[TRIGGER_CLICK] = !(context._isShown() && context._activeTrigger[TRIGGER_CLICK]);
 			            context.toggle();
 			          });
 			        } else if (trigger !== TRIGGER_MANUAL) {
@@ -5939,7 +5943,7 @@
 	}
 
 	/*!
-	  * Bootstrap popover.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap popover.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6045,7 +6049,7 @@
 	var scrollspy$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap scrollspy.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6330,7 +6334,7 @@
 	var tab$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap tab.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap tab.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6625,7 +6629,7 @@
 	var toast$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap toast.js v5.3.6 (https://getbootstrap.com/)
+	  * Bootstrap toast.js v5.3.7 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
