@@ -59,9 +59,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 					  gtag('event', 'conversion', {'send_to': '<?php echo $api_key6; ?>'});
 					</script>
 					
-<!-- 					Mailchimp -->
+					<!-- Attempt to clear Mailchimp Session (only works when navigating between posts/pages) -->
+					<script>
+// 						function cleanup() {
+						var cookies = document.cookie.split("; ");
+							// Loop through all cookies
+							for (var i = 0; i < cookies.length; i++) {
+								var cookie = cookies[i];
+
+								// Split the cookie name and value
+								var eqPos = cookie.indexOf("=");
+								var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+
+								// Check if cookie name matches the mcforms-*sessionId pattern
+								if (/^mcforms-\d+-sessionId$/.test(name)) {
+									// Remove the cookie by setting it to expire in the past
+									document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+								}
+									document.cookie = "_mcid=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+									document.cookie = "_abck=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+									document.cookie = "bm_sv=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+							}
+// 						}
+					</script>
 					
-					<script async id="mcjs">
+					
+<!-- 					Mailchimp -->
+					<script async id="mcjs1">
 						function showPopup() { 
 							!function(c,h,i,m,p){
 								m=c.createElement(h),
@@ -74,13 +98,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 									"script",
 									"https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key7; ?>.js"
 								);
-								//unsetting the cookie
-								document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";           
-								document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 						}
 
-						document.getElementById("show-popup").onclick = function() { showPopup(); }
-
+						document.getElementById("show-popup").onclick = function() {showPopup(); }
 
 						function showPopup2() { 
 							!function(c,h,i,m,p){
@@ -94,12 +114,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 									"script",
 									"https://chimpstatic.com/mcjs-connected/js/users/<?php echo $api_key10; ?>.js"
 								);
-								//unsetting the cookie
-								document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";           
-								document.cookie = "MCPopupSubscribed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 						}
 
-						document.getElementById("show-popup2").onclick = function() { showPopup2(); }
+						document.getElementById("show-popup2").onclick = function() {showPopup2();}
 					</script>
 <!-- 				End Mailchimp -->
 					<div class="site-info">
