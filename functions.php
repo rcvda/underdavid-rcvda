@@ -147,6 +147,23 @@ function site_info2_widgets_init() {
 	) );
 }
 
+
+/**
+ * Registers the "Logo Strip" widget area (David Stockdale).
+ */
+add_action( 'widgets_init', 'logo_strip_widgets_init' );
+function logo_strip_widgets_init() {
+	register_sidebar( array(
+		'id'            => 'logo-strip',
+		'name'          => __( 'Logo Strip', 'understrap' ),
+		'description'   => __( 'Widgets in this area will be shown below the site info footer', 'understrap' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<p>',
+		'after_title'   => '</p>',
+	) );
+}
+
 /**
  * Removes the site title from embedded content (David Stockdale).
  */

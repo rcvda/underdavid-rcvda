@@ -119,6 +119,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 						document.getElementById("show-popup2").onclick = function() {showPopup2();}
 					</script>
 <!-- 				End Mailchimp -->
+					
+					<?php
+					/**
+					 * Adds the "logo-strip" widget area!!!
+					 */
+					if ( !function_exists( 'dynamic_sidebar' ) 
+						|| !dynamic_sidebar('logo-strip') )
+					?>
+					
 					<div class="site-info">
 						
 						<?php understrap_site_info(); ?>
