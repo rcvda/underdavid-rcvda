@@ -102,7 +102,7 @@ function understrap_add_site_child_info() {
 		?>
 		<div class="wrap">
 			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by 
-				<a rel="nofollow" href=<?php echo 'https://www.milliethomasillustrations.com/' ?>>Millie Thomas
+				<a rel="nofollow" href=<?php echo 'https://www.linkedin.com/in/millie-thomas-50bbab181/' ?>>Millie Thomas
 				</a> and Developed by 
 				<a rel="nofollow" href=<?php echo 'https://davidstockdalescrapcode.co.uk/' ?>>David Stockdale
 				</a>/
@@ -118,7 +118,7 @@ function understrap_add_site_child_info() {
 		?>
 		<div class="wrap">
 			<p>Site commissioned from RCVDA&nbsp;/&nbsp;Designed by 
-				<a rel="nofollow" href=<?php echo 'https://www.milliethomasillustrations.com/' ?>>Millie Thomas
+				<a rel="nofollow" href=<?php echo 'https://www.linkedin.com/in/millie-thomas-50bbab181/' ?>>Millie Thomas
 				</a> and Developed by 
 				<a rel="nofollow" href=<?php echo 'https://davidstockdalescrapcode.co.uk/' ?>>David Stockdale
 				</a>/
@@ -140,6 +140,23 @@ function site_info2_widgets_init() {
 		'id'            => 'site-info2',
 		'name'          => __( 'Site Info 2', 'understrap' ),
 		'description'   => __( 'Widgets in this area will be shown in the bottom section of the site info footer', 'understrap' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<p>',
+		'after_title'   => '</p>',
+	) );
+}
+
+
+/**
+ * Registers the "Logo Strip" widget area (David Stockdale).
+ */
+add_action( 'widgets_init', 'logo_strip_widgets_init' );
+function logo_strip_widgets_init() {
+	register_sidebar( array(
+		'id'            => 'logo-strip',
+		'name'          => __( 'Logo Strip', 'understrap' ),
+		'description'   => __( 'Widgets in this area will be shown below the site info footer', 'understrap' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<p>',
