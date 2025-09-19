@@ -1349,3 +1349,99 @@ function wpf_dev_disable_field() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Use conditional logic with a date field to show or hide other form fields (David Stockdale).
+ * Based upon: https://wpforms.com/developers/how-to-use-conditional-logic-with-a-date-picker/
+ */
+add_action( 'wp_head', function () { ?>
+	<style>
+		/* CSS hide this field on page load */
+		#wpforms-form-24868 .age-restriction {
+			display:none;
+		}
+		/* CSS show this field if date conditional logic is true */
+		#wpforms-form-24868 .age-restriction.show-field {
+			display:block;
+		}
+		
+		/* CSS show this field on page load */
+		#wpforms-form-24868 .good-age {
+			display:block;
+		}
+		
+		/* CSS hide this field if date conditional logic is true */
+		#wpforms-form-24868 .good-age.hide-field {
+			display:none!important;
+		}
+	</style>
+<?php } );
+
+/**
+ * Runs Age Restription Check On WP Footer Forms (David Stockdale).
+ */
+add_action( 'wpforms_wp_footer_end', 'wpf_dev_age_restriction_check', 99 );
+/**
+ * Checks the age applicant and adds/removes classes for stying to hide/show certain fields (David Stockdale).
+ * Only works currently in form 24868 (Wheels 2 Work Application) based on date of birth (field ID 7).
+ * Adds "hide-field" class to ".good-age" class if under 17.
+ * Adds "show-field" class to ".age-restriction" class if under 17.
+ * Removes "hide-field" class from ".good-age" class if 17 or over.
+ * Removes "show-field" class from ".age-restriction" class if 17 or over.
+ * Based upon: https://wpforms.com/developers/how-to-use-conditional-logic-with-a-date-picker/
+ */
+function wpf_dev_age_restriction_check() {
+	?>
+	<script>
+		jQuery(function($) {
+			// Only fire this script when the field ID 7 for form ID 24868 is changed
+			document.querySelector( "#wpforms-24868-field_7-container" ).onchange = function() { 
+				
+				// Get year selected from Date Of Birth field for 
+				// form ID 2575 and 
+				// field ID 22
+				var date = $( "input#wpforms-24868-field_7" ).val();
+				
+				var oneDate = date.split("/").reverse().join("/").replace('/', '-');
+
+				var dob = new Date(oneDate); 
+				var today = new Date();
+
+				// Calculate age properly
+				var age = today.getFullYear() - dob.getFullYear();
+				var m = today.getMonth() - dob.getMonth();
+				if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+					age--;
+				}
+				
+				
+				if (age < 17) {
+					// Age < 17
+					// Hide Age Restriction Message
+					// Show All Inputs Requiring Good Age
+					$( ".good-age" ).addClass( "hide-field" );
+					$( ".age-restriction" ).addClass( "show-field" );
+				} else {
+					// Age => 17
+					// Show Age Restriction Message
+					// Hide All Inputs Requiring Good Age
+					$(".age-restriction").removeClass("show-field");
+					$(".good-age").removeClass("hide-field");
+				}
+			}
+		});
+	</script>
+	<?php
+}
+
+
