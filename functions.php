@@ -1420,17 +1420,89 @@ function wpf_dev_age_restriction_check() {
 				// Calculate age properly
 				var age = today.getFullYear() - dob.getFullYear();
 				var m = today.getMonth() - dob.getMonth();
+				
 				if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
 					age--;
 				}
 				
+				var interestedIn = $( "input#wpforms-24868-field_3" ).val();
 				
-				if (age < 17) {
+				if(age < 16) {
+					$( ".good-age" ).addClass( "hide-field" );
+					$( ".age-restriction" ).addClass( "show-field" );
+				} else if (age === 16) {
+					if(interestedIn === "An eCycle") {
+						$(".age-restriction").removeClass("show-field");
+						$(".good-age").removeClass("hide-field");
+					} else {
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					}
+				} else if (age < 17) {
 					// Age < 17
 					// Hide Age Restriction Message
 					// Show All Inputs Requiring Good Age
+					if(interestedIn === "An Electric Motorbike") {
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					} else if(interestedIn === "An eCycle") {
+						$(".age-restriction").removeClass("show-field");
+						$(".good-age").removeClass("hide-field");
+					} else {
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					}
+				} else {
+					// Age => 17
+					// Show Age Restriction Message
+					// Hide All Inputs Requiring Good Age
+					$(".age-restriction").removeClass("show-field");
+					$(".good-age").removeClass("hide-field");
+				}
+			}
+		});
+		
+		jQuery(function($) {
+			// Only fire this script when the field ID 7 for form ID 24868 is changed
+			document.querySelector( "#wpforms-24868-field_3-container" ).onchange = function() { 
+				
+				// Get year selected from Date Of Birth field for 
+				// form ID 2575 and 
+				// field ID 22
+				var date = $( "input#wpforms-24868-field_7" ).val();
+				
+				var oneDate = date.split("/").reverse().join("/").replace('/', '-');
+
+				var dob = new Date(oneDate); 
+				var today = new Date();
+
+				// Calculate age properly
+				var age = today.getFullYear() - dob.getFullYear();
+				var m = today.getMonth() - dob.getMonth();
+				
+				if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+					age--;
+				}
+				
+				var interestedIn = $( "input#wpforms-24868-field_3" ).val();
+				
+				if(age < 16) {
 					$( ".good-age" ).addClass( "hide-field" );
 					$( ".age-restriction" ).addClass( "show-field" );
+				} else if (age < 17) {
+					// Age < 17
+					// Hide Age Restriction Message
+					// Show All Inputs Requiring Good Age
+					if(interestedIn === "An Electric Motorbike") {
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					} else if(interestedIn === "An eCycle") {
+						$(".age-restriction").removeClass("show-field");
+						$(".good-age").removeClass("hide-field");
+					} else {
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					}
 				} else {
 					// Age => 17
 					// Show Age Restriction Message
@@ -1443,5 +1515,6 @@ function wpf_dev_age_restriction_check() {
 	</script>
 	<?php
 }
+
 
 
