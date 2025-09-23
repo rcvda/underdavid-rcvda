@@ -1412,8 +1412,10 @@ function wpf_dev_age_restriction_check() {
 				// field ID 22
 				var date = $( "input#wpforms-24868-field_7" ).val();
 				
-				var oneDate = date.split("/").reverse().join("/").replace('/', '-');
-
+				var oneDate = date.split("/").reverse().join("/").replace('/', '-').replace('/', '-');
+				
+// 				console.log(oneDate);
+				
 				var dob = new Date(oneDate); 
 				var today = new Date();
 
@@ -1424,35 +1426,46 @@ function wpf_dev_age_restriction_check() {
 				if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
 					age--;
 				}
+// 				console.log("Age: " + age);
 				
-				var interestedIn = $( "input#wpforms-24868-field_3" ).val();
+				var interestedIn = $( "select#wpforms-24868-field_3 option:selected" ).text();
+// 				console.log(interestedIn);
 				
 				if(age < 16) {
+// 					console.log("Under 16");
 					$( ".good-age" ).addClass( "hide-field" );
 					$( ".age-restriction" ).addClass( "show-field" );
-				} else if (age === 16) {
+				} else if (age == 16) {
+// 					console.log("Is 16");
 					if(interestedIn === "An eCycle") {
+// 						console.log("Interested in An eCycle");
 						$(".age-restriction").removeClass("show-field");
 						$(".good-age").removeClass("hide-field");
 					} else {
+// 						console.log("Interested in Not An eCycle");
 						$( ".good-age" ).addClass( "hide-field" );
 						$( ".age-restriction" ).addClass( "show-field" );
 					}
 				} else if (age < 17) {
+					console.log("Under 17");
 					// Age < 17
 					// Hide Age Restriction Message
 					// Show All Inputs Requiring Good Age
 					if(interestedIn === "An Electric Motorbike") {
+// 						console.log("Interested in An Electric Motorbike");
 						$( ".good-age" ).addClass( "hide-field" );
 						$( ".age-restriction" ).addClass( "show-field" );
 					} else if(interestedIn === "An eCycle") {
+// 						console.log("Interested in An eCycle");
 						$(".age-restriction").removeClass("show-field");
 						$(".good-age").removeClass("hide-field");
 					} else {
+// 						console.log("Interested in OTHER");
 						$( ".good-age" ).addClass( "hide-field" );
 						$( ".age-restriction" ).addClass( "show-field" );
 					}
 				} else {
+// 					console.log("Is 17 Or Over");
 					// Age => 17
 					// Show Age Restriction Message
 					// Hide All Inputs Requiring Good Age
@@ -1471,7 +1484,7 @@ function wpf_dev_age_restriction_check() {
 				// field ID 22
 				var date = $( "input#wpforms-24868-field_7" ).val();
 				
-				var oneDate = date.split("/").reverse().join("/").replace('/', '-');
+				var oneDate = date.split("/").reverse().join("/").replace('/', '-').replace('/', '-');
 
 				var dob = new Date(oneDate); 
 				var today = new Date();
@@ -1483,27 +1496,45 @@ function wpf_dev_age_restriction_check() {
 				if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
 					age--;
 				}
+				console.log("Age: " + age);
 				
-				var interestedIn = $( "input#wpforms-24868-field_3" ).val();
+				var interestedIn = $( "select#wpforms-24868-field_3 option:selected" ).text();
 				
 				if(age < 16) {
+// 					console.log("Under 16");
 					$( ".good-age" ).addClass( "hide-field" );
 					$( ".age-restriction" ).addClass( "show-field" );
+				} else if (age == 16) {
+// 					console.log("Is 16");
+					if(interestedIn === "An eCycle") {
+// 						console.log("Interested in An eCycle");
+						$(".age-restriction").removeClass("show-field");
+						$(".good-age").removeClass("hide-field");
+					} else {
+// 						console.log("Interested in Not An eCycle");
+						$( ".good-age" ).addClass( "hide-field" );
+						$( ".age-restriction" ).addClass( "show-field" );
+					}
 				} else if (age < 17) {
+// 					console.log("Under 17");
 					// Age < 17
 					// Hide Age Restriction Message
 					// Show All Inputs Requiring Good Age
 					if(interestedIn === "An Electric Motorbike") {
+// 						console.log("Interested in An Electric Motorbike");
 						$( ".good-age" ).addClass( "hide-field" );
 						$( ".age-restriction" ).addClass( "show-field" );
 					} else if(interestedIn === "An eCycle") {
+// 						console.log("Interested in An eCycle");
 						$(".age-restriction").removeClass("show-field");
 						$(".good-age").removeClass("hide-field");
 					} else {
+// 						console.log("Interested in OTHER");
 						$( ".good-age" ).addClass( "hide-field" );
 						$( ".age-restriction" ).addClass( "show-field" );
 					}
 				} else {
+// 					console.log("Is 17 Or Over");
 					// Age => 17
 					// Show Age Restriction Message
 					// Hide All Inputs Requiring Good Age
@@ -1515,6 +1546,5 @@ function wpf_dev_age_restriction_check() {
 	</script>
 	<?php
 }
-
 
 
