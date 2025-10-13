@@ -499,15 +499,18 @@ require_once('config.php');
  */
 add_shortcode( 'wp_google_search', 'search_attempt' );
 function search_attempt(){
-global $api_key1;
-?>
-<div class="thing">
-	<div class="uk-container uk-container-center">
-		<script async src="https://cse.google.com/cse.js?cx=<?php echo $api_key1; ?>"></script>
-		<div class="gcse-search"></div>
-	</div>
-</div>
-<?php
+	global $api_key1;
+	if ( is_page( array( 'search_gcse' ) ) )
+	{
+		?>
+		<div class="thing">
+			<div class="uk-container uk-container-center">
+				<script async src="https://cse.google.com/cse.js?cx=<?php echo $api_key1; ?>"></script>
+				<div class="gcse-search"></div>
+			</div>
+		</div>
+		<?php
+	}
 }
 
 /**

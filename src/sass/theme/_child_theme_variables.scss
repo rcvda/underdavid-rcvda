@@ -2107,3 +2107,11 @@ body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h
 	padding: 8% 8%!important;
 }
 
+
+/**
+ * Selectively remove annoying
+ * padding from buttons.
+ */
+.clean {
+	margin-top:0px!important;
+}
