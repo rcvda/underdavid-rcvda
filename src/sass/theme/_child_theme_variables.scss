@@ -2115,3 +2115,55 @@ body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h
 .clean {
 	margin-top:0px!important;
 }
+
+
+
+
+
+
+/**
+ * Quick and dirty styling of
+ * youtube featured videos
+ * in archive.
+ * 
+ * With exception to prevent
+ * messing with pdf poster.
+ */
+article > div > div > div:nth-child(1):not(.pdfp_wrapper) > div > iframe {
+	width: 150px!important;
+	height: 150px!important;
+}
+
+
+.sh-link {
+	text-align:center;
+}
+
+p.description-header-replacement {
+	margin-bottom: 0px;
+	color: var(--wp--preset--color--rcvda-dark-blue) !important;
+	padding: 0 1em 0 1em!important;
+	font-size: calc(1.275rem + .3vw)!important;
+	font-weight: 500!important;
+	line-height: 1.2!important;
+	font-family: "Fira Sans",sans-serif!important;
+}
+
+/**
+ * Intended for use in replaceing
+ * the h4 used in Page Description
+ * pattern.
+ */
+p.pseudo-h {
+	margin-bottom: .5rem!important;
+	font-family: "Fira Sans", sans-serif!important;
+	font-weight: 500!important;
+	line-height: 1.2!important;
+	padding-top: 0px!important;
+	padding-bottom: 0px!important;
+	padding-left: 1em!important;
+	padding-right: 1em!important;
+	margin-top: .5rem!important;
+	font-size: 1.5rem!important;
+}
+

@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.2.0 (https://understrap.com)
-  * Copyright 2013-2025 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2026 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL-3.0 (undefined)
   */
 (function (global, factory) {
@@ -60,7 +60,7 @@
 	function requireData () {
 		if (hasRequiredData) return data$1.exports;
 		hasRequiredData = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory() ;
 			})(data, function () {
@@ -133,10 +133,10 @@
 	function requireUtil () {
 		if (hasRequiredUtil) return util$1.exports;
 		hasRequiredUtil = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports) ;
-			})(util, function (exports) {
+			  factory(exports$1) ;
+			})(util, function (exports$1) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -382,26 +382,26 @@
 			    }
 			    return list[Math.max(0, Math.min(index, listLength - 1))];
 			  };
-			  exports.defineJQueryPlugin = defineJQueryPlugin;
-			  exports.execute = execute;
-			  exports.executeAfterTransition = executeAfterTransition;
-			  exports.findShadowRoot = findShadowRoot;
-			  exports.getElement = getElement;
-			  exports.getNextActiveElement = getNextActiveElement;
-			  exports.getTransitionDurationFromElement = getTransitionDurationFromElement;
-			  exports.getUID = getUID;
-			  exports.getjQuery = getjQuery;
-			  exports.isDisabled = isDisabled;
-			  exports.isElement = isElement;
-			  exports.isRTL = isRTL;
-			  exports.isVisible = isVisible;
-			  exports.noop = noop;
-			  exports.onDOMContentLoaded = onDOMContentLoaded;
-			  exports.parseSelector = parseSelector;
-			  exports.reflow = reflow;
-			  exports.toType = toType;
-			  exports.triggerTransitionEnd = triggerTransitionEnd;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.defineJQueryPlugin = defineJQueryPlugin;
+			  exports$1.execute = execute;
+			  exports$1.executeAfterTransition = executeAfterTransition;
+			  exports$1.findShadowRoot = findShadowRoot;
+			  exports$1.getElement = getElement;
+			  exports$1.getNextActiveElement = getNextActiveElement;
+			  exports$1.getTransitionDurationFromElement = getTransitionDurationFromElement;
+			  exports$1.getUID = getUID;
+			  exports$1.getjQuery = getjQuery;
+			  exports$1.isDisabled = isDisabled;
+			  exports$1.isElement = isElement;
+			  exports$1.isRTL = isRTL;
+			  exports$1.isVisible = isVisible;
+			  exports$1.noop = noop;
+			  exports$1.onDOMContentLoaded = onDOMContentLoaded;
+			  exports$1.parseSelector = parseSelector;
+			  exports$1.reflow = reflow;
+			  exports$1.toType = toType;
+			  exports$1.triggerTransitionEnd = triggerTransitionEnd;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -421,7 +421,7 @@
 	function requireEventHandler () {
 		if (hasRequiredEventHandler) return eventHandler$1.exports;
 		hasRequiredEventHandler = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireUtil()) ;
 			})(eventHandler, function (index_js) {
@@ -667,7 +667,7 @@
 	function requireManipulator () {
 		if (hasRequiredManipulator) return manipulator$1.exports;
 		hasRequiredManipulator = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory() ;
 			})(manipulator, function () {
@@ -745,7 +745,7 @@
 	function requireConfig () {
 		if (hasRequiredConfig) return config$1.exports;
 		hasRequiredConfig = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireManipulator(), requireUtil()) ;
 			})(config, function (Manipulator, index_js) {
@@ -818,7 +818,7 @@
 	function requireBaseComponent () {
 		if (hasRequiredBaseComponent) return baseComponent$1.exports;
 		hasRequiredBaseComponent = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireData(), requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(baseComponent, function (Data, EventHandler, Config, index_js) {
@@ -913,7 +913,7 @@
 	function requireSelectorEngine () {
 		if (hasRequiredSelectorEngine) return selectorEngine$1.exports;
 		hasRequiredSelectorEngine = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireUtil()) ;
 			})(selectorEngine, function (index_js) {
@@ -1023,10 +1023,10 @@
 	function requireComponentFunctions () {
 		if (hasRequiredComponentFunctions) return componentFunctions$1.exports;
 		hasRequiredComponentFunctions = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports, requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
-			})(componentFunctions, function (exports, EventHandler, SelectorEngine, index_js) {
+			  factory(exports$1, requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
+			})(componentFunctions, function (exports$1, EventHandler, SelectorEngine, index_js) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -1051,8 +1051,8 @@
 			      instance[method]();
 			    });
 			  };
-			  exports.enableDismissTrigger = enableDismissTrigger;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.enableDismissTrigger = enableDismissTrigger;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -1072,7 +1072,7 @@
 	function requireAlert () {
 		if (hasRequiredAlert) return alert$2.exports;
 		hasRequiredAlert = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireComponentFunctions(), requireUtil()) ;
 			})(alert$1, function (BaseComponent, EventHandler, componentFunctions_js, index_js) {
@@ -1172,7 +1172,7 @@
 	function requireButton () {
 		if (hasRequiredButton) return button$2.exports;
 		hasRequiredButton = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireUtil()) ;
 			})(button$1, function (BaseComponent, EventHandler, index_js) {
@@ -1263,7 +1263,7 @@
 	function requireSwipe () {
 		if (hasRequiredSwipe) return swipe$1.exports;
 		hasRequiredSwipe = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(swipe, function (EventHandler, Config, index_js) {
@@ -1403,7 +1403,7 @@
 	function requireCarousel () {
 		if (hasRequiredCarousel) return carousel$2.exports;
 		hasRequiredCarousel = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireManipulator(), requireSelectorEngine(), requireUtil(), requireSwipe()) ;
 			})(carousel$1, function (BaseComponent, EventHandler, Manipulator, SelectorEngine, index_js, Swipe) {
@@ -1801,7 +1801,7 @@
 	function requireCollapse () {
 		if (hasRequiredCollapse) return collapse$2.exports;
 		hasRequiredCollapse = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(collapse$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -3725,7 +3725,7 @@
 	function requireDropdown () {
 		if (hasRequiredDropdown) return dropdown$2.exports;
 		hasRequiredDropdown = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(require$$0, requireBaseComponent(), requireEventHandler(), requireManipulator(), requireSelectorEngine(), requireUtil()) ;
 			})(dropdown$1, function (Popper, BaseComponent, EventHandler, Manipulator, SelectorEngine, index_js) {
@@ -4143,7 +4143,7 @@
 	function requireBackdrop () {
 		if (hasRequiredBackdrop) return backdrop$1.exports;
 		hasRequiredBackdrop = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(backdrop, function (EventHandler, Config, index_js) {
@@ -4289,7 +4289,7 @@
 	function requireFocustrap () {
 		if (hasRequiredFocustrap) return focustrap$1.exports;
 		hasRequiredFocustrap = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireSelectorEngine(), requireConfig()) ;
 			})(focustrap, function (EventHandler, SelectorEngine, Config) {
@@ -4409,7 +4409,7 @@
 	function requireScrollbar () {
 		if (hasRequiredScrollbar) return scrollbar$1.exports;
 		hasRequiredScrollbar = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireManipulator(), requireSelectorEngine(), requireUtil()) ;
 			})(scrollbar, function (Manipulator, SelectorEngine, index_js) {
@@ -4527,7 +4527,7 @@
 	function requireModal () {
 		if (hasRequiredModal) return modal$2.exports;
 		hasRequiredModal = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireBackdrop(), requireComponentFunctions(), requireFocustrap(), requireUtil(), requireScrollbar()) ;
 			})(modal$1, function (BaseComponent, EventHandler, SelectorEngine, Backdrop, componentFunctions_js, FocusTrap, index_js, ScrollBarHelper) {
@@ -4857,7 +4857,7 @@
 	function requireOffcanvas () {
 		if (hasRequiredOffcanvas) return offcanvas$2.exports;
 		hasRequiredOffcanvas = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireBackdrop(), requireComponentFunctions(), requireFocustrap(), requireUtil(), requireScrollbar()) ;
 			})(offcanvas$1, function (BaseComponent, EventHandler, SelectorEngine, Backdrop, componentFunctions_js, FocusTrap, index_js, ScrollBarHelper) {
@@ -5117,10 +5117,10 @@
 	function requireSanitizer () {
 		if (hasRequiredSanitizer) return sanitizer$1.exports;
 		hasRequiredSanitizer = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports) ;
-			})(sanitizer, function (exports) {
+			  factory(exports$1) ;
+			})(sanitizer, function (exports$1) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -5216,9 +5216,9 @@
 			    }
 			    return createdDocument.body.innerHTML;
 			  }
-			  exports.DefaultAllowlist = DefaultAllowlist;
-			  exports.sanitizeHtml = sanitizeHtml;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.DefaultAllowlist = DefaultAllowlist;
+			  exports$1.sanitizeHtml = sanitizeHtml;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -5240,7 +5240,7 @@
 	function requireTemplateFactory () {
 		if (hasRequiredTemplateFactory) return templateFactory$1.exports;
 		hasRequiredTemplateFactory = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireSelectorEngine(), requireConfig(), requireSanitizer(), requireUtil()) ;
 			})(templateFactory, function (SelectorEngine, Config, sanitizer_js, index_js) {
@@ -5396,7 +5396,7 @@
 	function requireTooltip () {
 		if (hasRequiredTooltip) return tooltip$2.exports;
 		hasRequiredTooltip = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(require$$0, requireBaseComponent(), requireEventHandler(), requireManipulator(), requireUtil(), requireSanitizer(), requireTemplateFactory()) ;
 			})(tooltip$1, function (Popper, BaseComponent, EventHandler, Manipulator, index_js, sanitizer_js, TemplateFactory) {
@@ -5951,7 +5951,7 @@
 	function requirePopover () {
 		if (hasRequiredPopover) return popover$2.exports;
 		hasRequiredPopover = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireTooltip(), requireUtil()) ;
 			})(popover$1, function (Tooltip, index_js) {
@@ -6057,7 +6057,7 @@
 	function requireScrollspy () {
 		if (hasRequiredScrollspy) return scrollspy$2.exports;
 		hasRequiredScrollspy = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(scrollspy$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -6342,7 +6342,7 @@
 	function requireTab () {
 		if (hasRequiredTab) return tab$2.exports;
 		hasRequiredTab = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(tab$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -6637,7 +6637,7 @@
 	function requireToast () {
 		if (hasRequiredToast) return toast$2.exports;
 		hasRequiredToast = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireComponentFunctions(), requireUtil()) ;
 			})(toast$1, function (BaseComponent, EventHandler, componentFunctions_js, index_js) {
