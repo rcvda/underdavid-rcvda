@@ -1901,17 +1901,17 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 .dropdown-item {
 	white-space: pre-wrap!important;
 }
-.navbar-nav .menu-item {
-    //width: 100%;
-}
-.navbar-nav > .menu-item {
-	//min-width:310px!important;
-}
-@media (min-width: 1200px) {
-	.navbar-nav > .menu-item {
-		//min-width:372px!important;
-	}
-}
+// .navbar-nav .menu-item {
+//     width: 100%;
+// }
+// .navbar-nav > .menu-item {
+// 	min-width:310px!important;
+// }
+// @media (min-width: 1200px) {
+// 	.navbar-nav > .menu-item {
+// 		min-width:372px!important;
+// 	}
+// }
 
 /**
  * Disable Clicking on Menu
