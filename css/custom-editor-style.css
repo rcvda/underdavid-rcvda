@@ -2053,6 +2053,20 @@ p.pseudo-h {
   font-size: 1.5rem !important;
 }
 
+/**
+ * Google Search Style Fix.
+ */
+form.gsc-search-box {
+  max-width: 100% !important;
+}
+
+/**
+ * Miscelanious Styling.
+ */
+.btn-a {
+  padding-bottom: 0px !important;
+}
+
 *,
 *::before,
 *::after {

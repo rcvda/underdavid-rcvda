@@ -78,7 +78,7 @@ h2.line:after,
 h3.line:before,
 h3.line:after,
 h4.line:before,
-h4.line:after,
+h4.line:after
 {
 	background-color: #454545;
 	content: "";
@@ -2167,3 +2167,24 @@ p.pseudo-h {
 	font-size: 1.5rem!important;
 }
 
+
+
+
+
+
+
+
+/**
+ * Google Search Style Fix.
+ */
+form.gsc-search-box {
+	max-width:100%!important;
+}
+
+
+/**
+ * Miscelanious Styling.
+ */
+.btn-a {
+	padding-bottom:0px!important;
+}
