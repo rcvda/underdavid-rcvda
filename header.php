@@ -11,6 +11,7 @@
 defined('ABSPATH') || exit;
 require_once('config.php');
 global $api_key9;
+global $api_key11;
 
 $container = get_theme_mod('understrap_container_type');
 ?>
@@ -23,6 +24,7 @@ $container = get_theme_mod('understrap_container_type');
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<meta name="msvalidate.01" content="<?php echo $api_key11 ?>"/>
 
 
 	<!-- Facebook Pixel Code -->
