@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.2.0 (https://understrap.com)
-  * Copyright 2013-2025 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2026 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL-3.0 (undefined)
   */
 (function (global, factory) {
@@ -18,7 +18,11 @@
 	  var f = n.default;
 		if (typeof f == "function") {
 			var a = function a () {
-				if (this instanceof a) {
+				var isInstance = false;
+	      try {
+	        isInstance = this instanceof a;
+	      } catch {}
+				if (isInstance) {
 	        return Reflect.construct(f, arguments, this.constructor);
 				}
 				return f.apply(this, arguments);
@@ -45,7 +49,7 @@
 	var data$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap data.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap data.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -56,7 +60,7 @@
 	function requireData () {
 		if (hasRequiredData) return data$1.exports;
 		hasRequiredData = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory() ;
 			})(data, function () {
@@ -118,7 +122,7 @@
 	var util$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap index.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap index.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -129,10 +133,10 @@
 	function requireUtil () {
 		if (hasRequiredUtil) return util$1.exports;
 		hasRequiredUtil = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports) ;
-			})(util, function (exports) {
+			  factory(exports$1) ;
+			})(util, function (exports$1) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -378,26 +382,26 @@
 			    }
 			    return list[Math.max(0, Math.min(index, listLength - 1))];
 			  };
-			  exports.defineJQueryPlugin = defineJQueryPlugin;
-			  exports.execute = execute;
-			  exports.executeAfterTransition = executeAfterTransition;
-			  exports.findShadowRoot = findShadowRoot;
-			  exports.getElement = getElement;
-			  exports.getNextActiveElement = getNextActiveElement;
-			  exports.getTransitionDurationFromElement = getTransitionDurationFromElement;
-			  exports.getUID = getUID;
-			  exports.getjQuery = getjQuery;
-			  exports.isDisabled = isDisabled;
-			  exports.isElement = isElement;
-			  exports.isRTL = isRTL;
-			  exports.isVisible = isVisible;
-			  exports.noop = noop;
-			  exports.onDOMContentLoaded = onDOMContentLoaded;
-			  exports.parseSelector = parseSelector;
-			  exports.reflow = reflow;
-			  exports.toType = toType;
-			  exports.triggerTransitionEnd = triggerTransitionEnd;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.defineJQueryPlugin = defineJQueryPlugin;
+			  exports$1.execute = execute;
+			  exports$1.executeAfterTransition = executeAfterTransition;
+			  exports$1.findShadowRoot = findShadowRoot;
+			  exports$1.getElement = getElement;
+			  exports$1.getNextActiveElement = getNextActiveElement;
+			  exports$1.getTransitionDurationFromElement = getTransitionDurationFromElement;
+			  exports$1.getUID = getUID;
+			  exports$1.getjQuery = getjQuery;
+			  exports$1.isDisabled = isDisabled;
+			  exports$1.isElement = isElement;
+			  exports$1.isRTL = isRTL;
+			  exports$1.isVisible = isVisible;
+			  exports$1.noop = noop;
+			  exports$1.onDOMContentLoaded = onDOMContentLoaded;
+			  exports$1.parseSelector = parseSelector;
+			  exports$1.reflow = reflow;
+			  exports$1.toType = toType;
+			  exports$1.triggerTransitionEnd = triggerTransitionEnd;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -406,7 +410,7 @@
 	}
 
 	/*!
-	  * Bootstrap event-handler.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap event-handler.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -417,7 +421,7 @@
 	function requireEventHandler () {
 		if (hasRequiredEventHandler) return eventHandler$1.exports;
 		hasRequiredEventHandler = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireUtil()) ;
 			})(eventHandler, function (index_js) {
@@ -652,7 +656,7 @@
 	var manipulator$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap manipulator.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap manipulator.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -663,7 +667,7 @@
 	function requireManipulator () {
 		if (hasRequiredManipulator) return manipulator$1.exports;
 		hasRequiredManipulator = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory() ;
 			})(manipulator, function () {
@@ -730,7 +734,7 @@
 	}
 
 	/*!
-	  * Bootstrap config.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap config.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -741,7 +745,7 @@
 	function requireConfig () {
 		if (hasRequiredConfig) return config$1.exports;
 		hasRequiredConfig = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireManipulator(), requireUtil()) ;
 			})(config, function (Manipulator, index_js) {
@@ -803,7 +807,7 @@
 	}
 
 	/*!
-	  * Bootstrap base-component.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap base-component.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -814,7 +818,7 @@
 	function requireBaseComponent () {
 		if (hasRequiredBaseComponent) return baseComponent$1.exports;
 		hasRequiredBaseComponent = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireData(), requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(baseComponent, function (Data, EventHandler, Config, index_js) {
@@ -829,7 +833,7 @@
 			  /**
 			   * Constants
 			   */
-			  const VERSION = '5.3.5';
+			  const VERSION = '5.3.8';
 
 			  /**
 			   * Class definition
@@ -855,6 +859,8 @@
 			        this[propertyName] = null;
 			      }
 			    }
+
+			    // Private
 			    _queueCallback(callback, element, isAnimated = true) {
 			      index_js.executeAfterTransition(callback, element, isAnimated);
 			    }
@@ -896,7 +902,7 @@
 	var selectorEngine$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap selector-engine.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -907,7 +913,7 @@
 	function requireSelectorEngine () {
 		if (hasRequiredSelectorEngine) return selectorEngine$1.exports;
 		hasRequiredSelectorEngine = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireUtil()) ;
 			})(selectorEngine, function (index_js) {
@@ -1006,7 +1012,7 @@
 	}
 
 	/*!
-	  * Bootstrap component-functions.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap component-functions.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1017,10 +1023,10 @@
 	function requireComponentFunctions () {
 		if (hasRequiredComponentFunctions) return componentFunctions$1.exports;
 		hasRequiredComponentFunctions = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports, requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
-			})(componentFunctions, function (exports, EventHandler, SelectorEngine, index_js) {
+			  factory(exports$1, requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
+			})(componentFunctions, function (exports$1, EventHandler, SelectorEngine, index_js) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -1045,8 +1051,8 @@
 			      instance[method]();
 			    });
 			  };
-			  exports.enableDismissTrigger = enableDismissTrigger;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.enableDismissTrigger = enableDismissTrigger;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -1055,7 +1061,7 @@
 	}
 
 	/*!
-	  * Bootstrap alert.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap alert.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1066,7 +1072,7 @@
 	function requireAlert () {
 		if (hasRequiredAlert) return alert$2.exports;
 		hasRequiredAlert = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireComponentFunctions(), requireUtil()) ;
 			})(alert$1, function (BaseComponent, EventHandler, componentFunctions_js, index_js) {
@@ -1155,7 +1161,7 @@
 	var button$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap button.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap button.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1166,7 +1172,7 @@
 	function requireButton () {
 		if (hasRequiredButton) return button$2.exports;
 		hasRequiredButton = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireUtil()) ;
 			})(button$1, function (BaseComponent, EventHandler, index_js) {
@@ -1246,7 +1252,7 @@
 	var swipe$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap swipe.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap swipe.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1257,7 +1263,7 @@
 	function requireSwipe () {
 		if (hasRequiredSwipe) return swipe$1.exports;
 		hasRequiredSwipe = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(swipe, function (EventHandler, Config, index_js) {
@@ -1386,7 +1392,7 @@
 	}
 
 	/*!
-	  * Bootstrap carousel.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap carousel.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1397,7 +1403,7 @@
 	function requireCarousel () {
 		if (hasRequiredCarousel) return carousel$2.exports;
 		hasRequiredCarousel = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireManipulator(), requireSelectorEngine(), requireUtil(), requireSwipe()) ;
 			})(carousel$1, function (BaseComponent, EventHandler, Manipulator, SelectorEngine, index_js, Swipe) {
@@ -1784,7 +1790,7 @@
 	var collapse$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap collapse.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap collapse.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1795,7 +1801,7 @@
 	function requireCollapse () {
 		if (hasRequiredCollapse) return collapse$2.exports;
 		hasRequiredCollapse = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(collapse$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -1952,11 +1958,11 @@
 			      this._element.style[dimension] = '';
 			      this._queueCallback(complete, this._element, true);
 			    }
+
+			    // Private
 			    _isShown(element = this._element) {
 			      return element.classList.contains(CLASS_NAME_SHOW);
 			    }
-
-			    // Private
 			    _configAfterMerge(config) {
 			      config.toggle = Boolean(config.toggle); // Coerce string values
 			      config.parent = index_js.getElement(config.parent);
@@ -3708,7 +3714,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap dropdown.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -3719,7 +3725,7 @@
 	function requireDropdown () {
 		if (hasRequiredDropdown) return dropdown$2.exports;
 		hasRequiredDropdown = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(require$$0, requireBaseComponent(), requireEventHandler(), requireManipulator(), requireSelectorEngine(), requireUtil()) ;
 			})(dropdown$1, function (Popper, BaseComponent, EventHandler, Manipulator, SelectorEngine, index_js) {
@@ -4126,7 +4132,7 @@
 	var backdrop$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap backdrop.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap backdrop.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4137,7 +4143,7 @@
 	function requireBackdrop () {
 		if (hasRequiredBackdrop) return backdrop$1.exports;
 		hasRequiredBackdrop = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireConfig(), requireUtil()) ;
 			})(backdrop, function (EventHandler, Config, index_js) {
@@ -4272,7 +4278,7 @@
 	var focustrap$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap focustrap.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap focustrap.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4283,7 +4289,7 @@
 	function requireFocustrap () {
 		if (hasRequiredFocustrap) return focustrap$1.exports;
 		hasRequiredFocustrap = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireEventHandler(), requireSelectorEngine(), requireConfig()) ;
 			})(focustrap, function (EventHandler, SelectorEngine, Config) {
@@ -4392,7 +4398,7 @@
 	var scrollbar$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollbar.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap scrollbar.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4403,7 +4409,7 @@
 	function requireScrollbar () {
 		if (hasRequiredScrollbar) return scrollbar$1.exports;
 		hasRequiredScrollbar = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireManipulator(), requireSelectorEngine(), requireUtil()) ;
 			})(scrollbar, function (Manipulator, SelectorEngine, index_js) {
@@ -4510,7 +4516,7 @@
 	}
 
 	/*!
-	  * Bootstrap modal.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap modal.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4521,7 +4527,7 @@
 	function requireModal () {
 		if (hasRequiredModal) return modal$2.exports;
 		hasRequiredModal = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireBackdrop(), requireComponentFunctions(), requireFocustrap(), requireUtil(), requireScrollbar()) ;
 			})(modal$1, function (BaseComponent, EventHandler, SelectorEngine, Backdrop, componentFunctions_js, FocusTrap, index_js, ScrollBarHelper) {
@@ -4840,7 +4846,7 @@
 	var offcanvas$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap offcanvas.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4851,7 +4857,7 @@
 	function requireOffcanvas () {
 		if (hasRequiredOffcanvas) return offcanvas$2.exports;
 		hasRequiredOffcanvas = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireBackdrop(), requireComponentFunctions(), requireFocustrap(), requireUtil(), requireScrollbar()) ;
 			})(offcanvas$1, function (BaseComponent, EventHandler, SelectorEngine, Backdrop, componentFunctions_js, FocusTrap, index_js, ScrollBarHelper) {
@@ -5100,7 +5106,7 @@
 	var sanitizer$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap sanitizer.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap sanitizer.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5111,10 +5117,10 @@
 	function requireSanitizer () {
 		if (hasRequiredSanitizer) return sanitizer$1.exports;
 		hasRequiredSanitizer = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
-			  factory(exports) ;
-			})(sanitizer, function (exports) {
+			  factory(exports$1) ;
+			})(sanitizer, function (exports$1) {
 
 			  /**
 			   * --------------------------------------------------------------------------
@@ -5171,7 +5177,6 @@
 			   *
 			   * Shout-out to Angular https://github.com/angular/angular/blob/15.2.8/packages/core/src/sanitization/url_sanitizer.ts#L38
 			   */
-			  // eslint-disable-next-line unicorn/better-regex
 			  const SAFE_URL_PATTERN = /^(?!javascript:)(?:[a-z0-9+.-]+:|[^&:/?#]*(?:[/?#]|$))/i;
 			  const allowedAttribute = (attribute, allowedAttributeList) => {
 			    const attributeName = attribute.nodeName.toLowerCase();
@@ -5211,9 +5216,9 @@
 			    }
 			    return createdDocument.body.innerHTML;
 			  }
-			  exports.DefaultAllowlist = DefaultAllowlist;
-			  exports.sanitizeHtml = sanitizeHtml;
-			  Object.defineProperty(exports, Symbol.toStringTag, {
+			  exports$1.DefaultAllowlist = DefaultAllowlist;
+			  exports$1.sanitizeHtml = sanitizeHtml;
+			  Object.defineProperty(exports$1, Symbol.toStringTag, {
 			    value: 'Module'
 			  });
 			}); 
@@ -5224,7 +5229,7 @@
 	var templateFactory$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap template-factory.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap template-factory.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5235,7 +5240,7 @@
 	function requireTemplateFactory () {
 		if (hasRequiredTemplateFactory) return templateFactory$1.exports;
 		hasRequiredTemplateFactory = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireSelectorEngine(), requireConfig(), requireSanitizer(), requireUtil()) ;
 			})(templateFactory, function (SelectorEngine, Config, sanitizer_js, index_js) {
@@ -5380,7 +5385,7 @@
 	}
 
 	/*!
-	  * Bootstrap tooltip.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap tooltip.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5391,7 +5396,7 @@
 	function requireTooltip () {
 		if (hasRequiredTooltip) return tooltip$2.exports;
 		hasRequiredTooltip = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(require$$0, requireBaseComponent(), requireEventHandler(), requireManipulator(), requireUtil(), requireSanitizer(), requireTemplateFactory()) ;
 			})(tooltip$1, function (Popper, BaseComponent, EventHandler, Manipulator, index_js, sanitizer_js, TemplateFactory) {
@@ -5784,6 +5789,7 @@
 			        if (trigger === 'click') {
 			          EventHandler.on(this._element, this.constructor.eventName(EVENT_CLICK), this._config.selector, event => {
 			            const context = this._initializeOnDelegatedTarget(event);
+			            context._activeTrigger[TRIGGER_CLICK] = !(context._isShown() && context._activeTrigger[TRIGGER_CLICK]);
 			            context.toggle();
 			          });
 			        } else if (trigger !== TRIGGER_MANUAL) {
@@ -5934,7 +5940,7 @@
 	}
 
 	/*!
-	  * Bootstrap popover.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap popover.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -5945,7 +5951,7 @@
 	function requirePopover () {
 		if (hasRequiredPopover) return popover$2.exports;
 		hasRequiredPopover = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireTooltip(), requireUtil()) ;
 			})(popover$1, function (Tooltip, index_js) {
@@ -6040,7 +6046,7 @@
 	var scrollspy$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap scrollspy.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6051,7 +6057,7 @@
 	function requireScrollspy () {
 		if (hasRequiredScrollspy) return scrollspy$2.exports;
 		hasRequiredScrollspy = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(scrollspy$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -6325,7 +6331,7 @@
 	var tab$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap tab.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap tab.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6336,7 +6342,7 @@
 	function requireTab () {
 		if (hasRequiredTab) return tab$2.exports;
 		hasRequiredTab = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireSelectorEngine(), requireUtil()) ;
 			})(tab$1, function (BaseComponent, EventHandler, SelectorEngine, index_js) {
@@ -6620,7 +6626,7 @@
 	var toast$2 = {exports: {}};
 
 	/*!
-	  * Bootstrap toast.js v5.3.5 (https://getbootstrap.com/)
+	  * Bootstrap toast.js v5.3.8 (https://getbootstrap.com/)
 	  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6631,7 +6637,7 @@
 	function requireToast () {
 		if (hasRequiredToast) return toast$2.exports;
 		hasRequiredToast = 1;
-		(function (module, exports) {
+		(function (module, exports$1) {
 			(function (global, factory) {
 			  module.exports = factory(requireBaseComponent(), requireEventHandler(), requireComponentFunctions(), requireUtil()) ;
 			})(toast$1, function (BaseComponent, EventHandler, componentFunctions_js, index_js) {
@@ -6744,7 +6750,6 @@
 			    }
 
 			    // Private
-
 			    _maybeScheduleHide() {
 			      if (!this._config.autohide) {
 			        return;

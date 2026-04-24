@@ -1,0 +1,18 @@
+# Don’t publish dev/build assets
+node_modules/
+src/
+vendor/
+*.map
+config.php
+
+# Build tools & configs
+composer.json
+composer.lock
+package.json
+package-lock.json
+gulpfile.js
+webpack.config.js
+
+# System files
+.DS_Store
+Thumbs.db
