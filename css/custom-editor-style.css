@@ -764,7 +764,15 @@ h5, .h5 {
 /**
  *	Standard Header Margins.
  */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
   margin-top: 0.5rem !important;
 }
 
@@ -859,7 +867,8 @@ h1, .h1 {
 /**
  * Default colour of button block
  */
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background), .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background) {
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background),
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background) {
   background-color: #0B4C8C !important;
 }
 
@@ -1914,7 +1923,8 @@ div.wpforms-container-full {
   top: 0;
 }
 
-#innerdiv2 .h1, #innerdiv2 h1 {
+#innerdiv2 .h1,
+#innerdiv2 h1 {
   font-size: 2.5em;
 }
 
@@ -1923,7 +1933,8 @@ div.wpforms-container-full {
   margin-left: 5% !important;
 }
 
-body.page-template-featurepage .entry-title.h1, body.page-template-featurepage h1.entry-title {
+body.page-template-featurepage .entry-title.h1,
+body.page-template-featurepage h1.entry-title {
   background-color: #000 !important;
   border-radius: 15px 15px 0 0;
   padding-left: 10px;
