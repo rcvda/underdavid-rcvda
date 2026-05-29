@@ -1333,7 +1333,7 @@ function vacancy_box_shortcode($atts)
 
 				if (isset($atts['type']) && !empty($atts['type'])) {
 					$type = $atts['type'];
-					if ($type = "opportunity") {
+					if ($type === "opportunity") {
 						$result .= 'Opportunity Ended';
 					} else {
 						$result .= 'Vacancy Closed';
